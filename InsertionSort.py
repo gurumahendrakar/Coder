@@ -13,8 +13,6 @@ array = [8,-3,5,2,5,6,67,36,3,3,6,7,7,89,9,-8,-4,6,-4,6,3,5,3,63,6,3,6]
 print("Orginal Array : ",array)
 class Insertionsort:
 
-
-
     def _indexfinder(self,array):
         global x,y
         while y<=len(array)-1:

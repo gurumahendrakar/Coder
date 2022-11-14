@@ -1,12 +1,14 @@
 
 Gameover = False
-import pygame
 x=50 ;  y = 50
 running = 0
 running2 = 0
 import  random
 snakesize = 10
 snakelist = [(50,50)]
+
+import pygame
+
 
 foodinteger = random.choice(list(range(200,900)))
 score = 0

@@ -22,9 +22,8 @@ genrator_listcomprehenstion = (i for i in range(8))
 for i in a:
     print(i,end=" ")
 
+
 # list empty now sab value foor loop me madat se use kar liye
-
-
 #no iteration is list is empty 
 for i in a:
     print(i)
