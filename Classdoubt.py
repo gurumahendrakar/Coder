@@ -85,7 +85,9 @@
 #         del self.__dict__[__name]
 #         print("Succusfully Deleted")
 #
-#
+#     def __getattribute__(self,attribute):
+#             return self.__dict__[attribute]
+
 # class_helps = class_help()
 # class_helps.Guru = "Mahendrakar"
 # del class_helps.Guru
