@@ -56,6 +56,7 @@ fram = tkinter.Button(frame2,text='guruji')
 fram.grid(row=0,column=0,sticky=tkinter.N,columnspan=200)
 frame2.grid(row=1,column=0)
 
+#YELLOW YELLOW SAMA
 
 window.mainloop()
 
