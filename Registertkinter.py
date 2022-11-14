@@ -49,18 +49,13 @@ MenuColor = tkinter.Menu(RegisterFrame)
 MenuColor.add_command(label="Color",command=ColoChangerFrame)
 window.config(menu = MenuColor)
 
-frae = tkinter.Frame(window,bg="yellow",highlightbackground='white',highlightthickness=5,width=100)
-frae.grid(row=1,column=0,columnspan=35,rowspan=15)
 
-aa = tkinter.Scrollbar(frae,orient=tkinter.VERTICAL)
+frame2 = tkinter.Frame(window,bg='green',borderwidth=6,relief='sunken',padx=100,pady=100,width=200,height=200)
 
-a = tkinter.Text(frae,bg='gray',xscrollcommand=aa.set,width=20)
-for i in range(100):
-    a.insert(tkinter.END,'ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo')
-aa.config(command=a.xview)
-a.grid(row=0,column=0)
+fram = tkinter.Button(frame2,text='guruji')
+fram.grid(row=0,column=0,sticky=tkinter.N,columnspan=200)
+frame2.grid(row=1,column=0)
 
-aa.place(x=0,y=60)
 
 window.mainloop()
 
