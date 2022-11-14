@@ -1,4 +1,7 @@
-# #not completed
+#.......................................... #not completed...................................................
+
+
+
 # from re import X
 # from turtle import right, width
 # import pygame
