@@ -6,7 +6,7 @@ framecolor = 'black'
 window = tkinter.Tk()
 window.config(bg='white')
 window.geometry('500x500')
-RegisterFrame = tkinter.Frame(window,bg='white',padx=None)
+RegisterFrame = tkinter.Frame(window,highlightbackground='gray',highlightthickness=3,bg='white',pady=25)
 RegisterFrame.grid(row=0,column=0)
 fontt = tkinter.font.Font(family='myfont.ttf',size=11,weight='bold')
 
@@ -50,26 +50,10 @@ MenuColor.add_command(label="Color",command=ColoChangerFrame)
 window.config(menu = MenuColor)
 
 
-frame2 = tkinter.Frame(window,bg='green',highlightbackground='gray',highlightthickness=6,pady=50)
-frame2.grid(row=1,column=0,columnspan=100)
+frame2 = tkinter.Frame(window,bg='green',borderwidth=6,relief='sunken',width=200,height=200)
+frame2.grid(row=1,column=0)
 
-
-c = tkinter.Scrollbar(frame2,orient=tkinter.VERTICAL)
-
-
-a = tkinter.Text(frame2,yscrollcommand=c.set)
-
-for i in range(300):
-    a.insert(f'{i}.0','-------------')
-c.config(command=a.yview)
-c.pack(side=tkinter.RIGHT,fill='y')
-a.pack( side=tkinter.LEFT)
-
-frame3 = tkinter.Frame(window,height=200,width=200,bg="pink")
-frame3.grid(row=2,column=0,columnspan=440)
-
-text2 = tkinter.Text(frame3,width=200,height=200)
-text2.grid(row=0,column=0)
-
+textinputer = tkinter.Text(frame2,width=70,height=25,)
+textinputer.pack(side=tkinter.LEFT)
 
 window.mainloop()
