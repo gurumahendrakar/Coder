@@ -1,4 +1,4 @@
-listt = [7,4,6,3,2,0,-8,2,5,-6]
+listt = [8,35,3,4,3,43,3,44,23,4,234,2,5,235,324,234,23,42,34,125,25,42,34,2,5,2,42,34,24,214,12,5,5123,412342,134,234,23,4]
 i = len(listt)
 print("origanal list",listt)
 
@@ -45,16 +45,19 @@ class shellsort:
 
             else:
                 a,b = 0,1
-               
-                
-                while d<len(listt)-2:
+                c,d = 0,1
+                while d<=len(listt)-1:
                     if listt[a]>listt[b]:
                         listt[a],listt[b] = listt[b],listt[a]
-                        
+                        if (a-1)>0 and (b-1)>1:
+                            b-=1
+                            a-=1
+                    else:
+                        a = c+1
+                        b= d +1
+                        c,d = a,b
 
-                    
-                    
-                                          
+
 
         split_sorting()
                 
