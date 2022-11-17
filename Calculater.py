@@ -6,31 +6,43 @@ icon = r"C:\Users\mahen\Downloads\Papirus-Team-Papirus-Mimetypes-App-x-designer.
 window = tk()
 window.iconbitmap(icon)
 window.title("Calculater")
-window.geometry('340x450')
+
+window.geometry('333x385')
 
 
-frame1 = Frame(window,width=320,height=120,bg='black')
+
+def Entered():
+    print()
+
+
+frame1 = Frame(window,width=275,height=120,bg='black',highlightcolor='black',highlightthickness=1,----x=3.5,pady=3)
 frame1.grid(row=0,column=0,padx=0)
 
-numberinputer = Text(frame1,width=13,height=2,border=0, foreground='white',bg='black',font=('myfont.ttf',35))
-numberinputer.pack(side=BOTTOM)
-numberinputer.insert(1.0,'                                                                                              ')
+Entryy = Entry(frame1,width=54,background='black',fg='white')
+Entryy.pack(side=BOTTOM,fill=BOTH)
 
-frame2 = Frame(window,width=350,height=420,bg='green')
-frame2.grid(row=1,column=0,columnspan=25)
+frame2 = Frame(window,width=300,height=420,bg='green',highlightcolor='black',highlightthickness=2,background='white')
+frame2.grid(row=1,column=0,sticky=tkinter.W)
 
-frame3 = Frame(window, width=350,height=4200,bg='blue')
-frame3.grid(row=2,column=0,columnspan=25)
+def button(frame,text,*,row,column,width=None,sticky=None,padx=None):
+    
+    button1 = Button(frame,text=text,font='myfont2.ttf 16 ',height=1,width=width,bg='black',fg='white',command=lambda : numberinputer.insert(END,'guru'))
+    button1.grid(row=row,column=column,sticky=sticky)
+    
+col = 1
+for row in range(3):
+    for column in range(3):
+        button(frame2,col,row=row,column=column,sticky=tkinter.W,width=6)
+        col+=1
 
-def button(frame,text,side,anchor=None):
-    button1 = Button(frame,text=text,font='myfont.ttf 19 bold',width=7,bg='green',fg='white')
-    button1.pack(side=side,anchor=anchor)
+else:
+    for index,columns in enumerate(['*','**',"%","/",'+',"-"]):
+        button(frame2,columns,row=index,column=4,width = 6,sticky=tkinter.W)
 
+col = 0
+for row in range(3,6):
+    for column in range(3):
+        button(frame2,['(',')','0','Clear','back','color','-','X','=',][col],row=row,column=column,sticky=tkinter.W,width=6)
+        col+=1
 
-button(frame2,'1',LEFT)
-button(frame2,'2',LEFT)
-button(frame2,'3',LEFT)
-button(frame3,'4',LEFT)
-button(frame3,'5',LEFT)
-button(frame3,'6',LEFT)
 window.mainloop()
