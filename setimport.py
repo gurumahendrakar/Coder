@@ -22,18 +22,3 @@
 
 
 
-import tkinter
-
-window = tkinter.Tk()
-window.configure(bg='gold')
-frame1 = tkinter.Frame(window,bg='black')
-frame1.grid(row=0,column=0)
-Guru_namelabel = tkinter.Label(frame1,text="Guru Mahendrakar")
-Guru_namelabel.grid(row=0,column=1)
-
-frame2 = tkinter.Frame(window,bg="Blue")
-frame2.grid(row=0,column=1)
-Sirname_label = tkinter.Label(frame2,
-                              fg='blue',text=" Hello Whats Up!! ")
-Sirname_label.grid(row=0,column=0,columnspan=83)
-window.mainloop()

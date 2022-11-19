@@ -15,7 +15,7 @@ def Entered():
     print()
 
 
-frame1 = Frame(window,width=275,height=120,bg='black',highlightcolor='black',highlightthickness=1,----x=3.5,pady=3)
+frame1 = Frame(window,width=275,height=120,bg='black',highlightcolor='black',highlightthickness=1,pady=3)
 frame1.grid(row=0,column=0,padx=0)
 
 Entryy = Entry(frame1,width=54,background='black',fg='white')

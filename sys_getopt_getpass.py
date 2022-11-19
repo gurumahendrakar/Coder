@@ -24,3 +24,9 @@ print(a,b)
 "f:m:s:sea" # means -f -s -m -sea  hoga to : -> (first tuple me ayenge) OR ( nahi hoga to dusre tuple me )
 #output = [('-f', 'Guru')] ['Mahendrakar']
 
+
+
+#-----------------------------------------------memoryview------------------------------------------------------------------
+
+list = [1,2,3,4,5,6]
+

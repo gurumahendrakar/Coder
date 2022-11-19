@@ -49,7 +49,7 @@ class shellsort:
                 while d<=len(listt)-1:
                     if listt[a]>listt[b]:
                         listt[a],listt[b] = listt[b],listt[a]
-                        if (a-1)>0 and (b-1)>1:
+                        if (a-1)>=0 and (b-1)>=1:
                             b-=1
                             a-=1
                     else:

@@ -9,7 +9,7 @@
      # Is ki madad se __object__ create karenge __call__ ke andar __new__ ki Help__ se 
 
 
-# Dono Nahi Hai to Builtin Object __new__ method se Object Create Karega
+# parent class __new__  nahi  (__init__ or __call__ ) Hone Chahiye ye Dono Nahi Hai to Builtin Object me  __new__ method se Object Create Karega
 
 
 

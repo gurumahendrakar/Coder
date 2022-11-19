@@ -1332,29 +1332,32 @@
 # a = dict(map(lambda x : [x[0],int(x[1])] ,sorted(string,key= lambda x :x[1])))
 
 # print(a)
+#
+# from dataclasses import dataclass
+# @dataclass
+# class cool:
+#     bj = 'guruji'
+#
+#     b:3
+#
+#     def __str__(self):
+#         print('called')
+#         return "Called"
+#
+#     def __eq__(self, other):
+#         print("yo")
+#
+#
+#
+#
+#
+#     def yo(self):
+#         return "Cool brother"
+#
+# a = cool(7)
+# import dataclasses
+# print(dataclasses.asdict(a))
+# print(dataclasses.astuple(a))
 
-from dataclasses import dataclass
-@dataclass
-class cool:
-    bj = 'guruji'
-
-    b:3
-
-    def __str__(self):
-        print('called')
-        return "Called"
-
-    def __eq__(self, other):
-        print("yo")
 
 
-
-
-
-    def yo(self):
-        return "Cool brother"
-
-a = cool(7)
-import dataclasses
-print(dataclasses.asdict(a))
-print(dataclasses.astuple(a))
