@@ -310,34 +310,100 @@ window.geometry("400x400")
 
 #--------------------------------------------------------------Listbox---------------------------------------------------------------------------
 
-def __command(event=None):
-    listbox.delete(len(listbox)-1,END)
 
 
-listbox = Listbox(window,
-                  bg='black',
-                  fg='white',
-                  border=3,
-                  borderwidth=5,
-                  relief='sunken',
-                  cursor='hand2',
-                  highlightbackground='yellow',
-                  highlightcolor='green',
-                  highlightthickness=5,
-                  selectforeground='pink'
-                  ,selectborderwidth=3,
-                  selectbackground='white',
-                  selectmode='multiple',
-                  listvariable=['yo','gljf'] )
 
-for products in ['aluvera','soda','cream','ponds','fairnlovely','lipstick']:
-    listbox.insert(0,products)
+# def __delete(event=None):
+#     print(listbox.curselection())
+#     listbox.delete(listbox.size()-1,END)
+#
+#
+# def __clear():
+#
+#     for index in listbox.curselection():
+#         listbox.delete(listbox.size()-index,index)
+#
+#
+# variable = StringVar()
+#
+# listbox = Listbox(window,
+#                   bg='black',
+#                   fg='white',
+#                   border=3,
+#                   borderwidth=5,
+#                   relief='sunken',
+#                   cursor='hand2',
+#                   highlightbackground='yellow',
+#                   highlightcolor='green',
+#                   highlightthickness=5,
+#                   selectforeground='pink'
+#                   ,selectborderwidth=3,
+#                   selectbackground='white',
+#                   selectmode='multiple',
+#                   listvariable=variable)
+#
+# for products in ['aluvera','soda','cream','ponds','fairnlovely','lipstick']:
+#     listbox.insert(0,products)
+#
+#
+# listbox.pack()
+# # listbox.bind('<<ListboxSelect>>',__command)
+#
+# dlt_button = Button(window,text='Delete',bg='green',command=__clear)
+# dlt_button.pack()
 
 
-listbox.pack()
-# listbox.bind('<<ListboxSelect>>',__command)
 
-dlt_button = Button(window,text='Delete',bg='green',command=__command)
-dlt_button.pack()
+
+#---------------------------------------------------Scale---------------------------------------------------------------------------
+
+
+
+
+
+# frameOone = Frame(window,bg='blue',height=400)
+# frameOone.grid(row=0,column=0)
+#
+# label = Label(frameOone,text='guruji',
+#               width=20,
+#               height=20,
+#               bg='red',
+#               )
+# label.pack(side=LEFT)
+#
+# def __you(scale):
+#     print("Scale Is Hear Brother",scale)
+#
+# variable = IntVar()
+# scale = Scale(frameOone,
+#               from_=0,
+#               to=1000,
+#               orient=VERTICAL,
+#               variable=variable,
+#               command=__you,
+#               resolution=50,
+#               showvalue=10,
+#               bg='black',
+#               troughcolor='black',
+#               sliderrelief='groove',
+#               sliderlength=100,
+#               state='normal',
+#               tickinterval=10,
+#               fg='white',
+#               font='myfont4.ttf 19 italic underline')
+#
+# scale.config(width=15)
+# scale.pack(side=LEFT,
+#
+#            anchor='nw',
+#            fill='y')
+
+
+
+#-------------------------------------------------------Combobox-----------------------------------------------------------------------------
+
+
+
+
 
 window.mainloop()
