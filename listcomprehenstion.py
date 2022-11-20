@@ -34,14 +34,3 @@
 #
 # list_comprehenstion = [i for  i in range(8)]
 
-
-
-x = 0
-listt = ['guru' if x==1  else -1 for z in range(3) for y in range(4) for x in range(0,4)]
-
-
-
-
-a =(lambda a : i for i in range(0,6))
-print(list(a))
-print(lambda x : x)

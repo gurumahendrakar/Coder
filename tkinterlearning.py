@@ -1,3 +1,4 @@
+import tkinter.ttk
 from tkinter import *
 from PIL import *
 from PIL import Image,ImageTk
@@ -311,17 +312,19 @@ window.geometry("400x400")
 #--------------------------------------------------------------Listbox---------------------------------------------------------------------------
 
 
-
-
+#
+#
 # def __delete(event=None):
 #     print(listbox.curselection())
 #     listbox.delete(listbox.size()-1,END)
 #
 #
 # def __clear():
-#
+#     count = 0
 #     for index in listbox.curselection():
-#         listbox.delete(listbox.size()-index,index)
+#         listbox.delete(index-count,index-count)
+#         count+=1
+#
 #
 #
 # variable = StringVar()
@@ -340,10 +343,11 @@ window.geometry("400x400")
 #                   ,selectborderwidth=3,
 #                   selectbackground='white',
 #                   selectmode='multiple',
-#                   listvariable=variable)
+#                   listvariable=variable,
+#                   )
 #
-# for products in ['aluvera','soda','cream','ponds','fairnlovely','lipstick']:
-#     listbox.insert(0,products)
+# for products in [i for i in range(100)]:
+#     listbox.insert(END,products)
 #
 #
 # listbox.pack()
@@ -351,16 +355,16 @@ window.geometry("400x400")
 #
 # dlt_button = Button(window,text='Delete',bg='green',command=__clear)
 # dlt_button.pack()
-
+#
 
 
 
 #---------------------------------------------------Scale---------------------------------------------------------------------------
-
-
-
-
-
+#
+#
+#
+#
+#
 # frameOone = Frame(window,bg='blue',height=400)
 # frameOone.grid(row=0,column=0)
 #
@@ -402,8 +406,81 @@ window.geometry("400x400")
 
 #-------------------------------------------------------Combobox-----------------------------------------------------------------------------
 
+# def comboboxselected(event):
+#
+#     a =combobox.get()
+#     print(a,event)
+#
+#
+# Bolle = Scrollbar(window,orient='vertical')
+# Bolle.pack(side='right',fill='both')
+# combobox = tkinter.ttk.Combobox(window,width=30,
+#                                 height=10,
+#                                 values=['dosa','chicken','paratha','Gobikisabzi'],
+#                                 state='readonly',
+#                                 justify='center',
+#                                 # show = '-'
+#                                 exportselection=True,
+#                                 # postcommand=cool,#kitne baar combobox pe click kiya
+#
+#                                 )
+# combobox.pack()
+# combobox.set('Chicken')
+# Bolle.configure(bg='green')
+# listbox.config(yscrollcommand=Bolle)
+# combobox.bind('<<ComboboxSelected>>',cool)
+# Bolle.config(command=listbox.yview)
+#
+
+
+
+
+
+
+#--------------------------------------------------------------------Spinbox-----------------------------------------------------------------------------------------------
+
+
+#
+#
+#
+#
+# def spinselect():
+#     print(spin.get()
+#           )
+#
+#
+# spin = Spinbox(window,width=30,
+#                from_= 0,
+#                to=10,
+#                wrap=True,
+#                command=spinselect,
+#                buttondownrelief='sunken',
+#                buttoncursor='hand2',
+#                buttonbackground='red',
+#                borderwidth=5,
+#                increment=3,
+#                insertontime=1000,
+#                state='readonly',
+#                bg='green',
+#                fg='red',
+#                insertbackground='green',
+#                selectbackground='yellow',
+#                selectforeground='black',
+#                selectborderwidth=7
+#                )
+# spin.pack()
+#
+# spin.bind('<<Increment>>')
+#
+# spin.bind('<<Decrement>>')
+#
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
 
 window.mainloop()
+
