@@ -8,6 +8,7 @@ from PIL import Image,ImageTk
 window = Tk() #Creating window
 window.title("Practice")
 window.iconbitmap(r"C:\Users\mahen\Downloads\icons8-wi-fi-fair-48 (1).ico")
+
 window.geometry("400x400")
 
 
@@ -478,7 +479,33 @@ window.geometry("400x400")
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
+frameOone= Frame(window,width=200,height=300,bg='green',border=5)
+frameOone2 = Frame(window,width=200,height=300,bg='green',border=5)
+frameOone3 = Frame(window,width=200,height=300,bg='green',border=5)
 
+button = Button(frameOone,text='LEFT-NW',width=10,height=10)
+button2 = Button(frameOone,text='LEFT-NW',width=10,height=10)
+button3 = Button(frameOone,text='LEFT-W',width=10,height=10)
+button4 = Button(frameOone,text='WEST',width=10,height=10,bg='green')
+button5 = Button(frameOone,text='BOTTOM-SE',width=10,height=10)
+button6 = Button(frameOone,text='BOTTOM-SE',width=10,height=10)
+button7 = Button(frameOone,text='BOTTOM-SE',width=10,height=10)
+button8 = Button(frameOone,text='RIGHT-SE',width=10,height=10)
+button9 = Button(frameOone,text='RIGHT-SE',width=10,height=10)
+button10 = Button(frameOone,text='LEFT',width=10,height=10)
+
+frameOone.pack(side=LEFT,anchor='nw')
+
+button.pack(side=LEFT, anchor='nw', fill='y')
+button2.pack(side=LEFT, anchor='nw', fill='y')
+button3.pack(side=LEFT,anchor='nw')
+button4.pack(side=LEFT,anchor='nw')
+button5.pack(side=BOTTOM,anchor='se')
+button6.pack(side=BOTTOM,anchor='se')
+button7.pack(side=BOTTOM,anchor='se')
+button8.pack(side=RIGHT,anchor='se')
+button9.pack(side=RIGHT,anchor='se')
+button10.pack(side=LEFT,anchor='nw')
 
 
 
