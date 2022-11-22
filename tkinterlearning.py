@@ -506,31 +506,73 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 
 window = Tk()
 
-frameOone = Frame(window,bg='black')
-frameOone.pack(side='left')
+window.title('Guru Mahendrakar')
+window.configure(bg='pink')
 
-label = Button(frameOone, text='Button-1',bg='yellow')
-label.pack(side='left',fill='x',anchor='nw')
+frameoOne = Frame(window,bg='green')
+frameoOne.grid(row=0,column=0)
 
-label2 = Button(frameOone, text='Button-2',bg='yellow',height=10)
-label2.pack(side='left',fill='x')
+label = Label(frameoOne,text='Button-1',bg='yellow')
+label.grid(row=0,column=0)
 
-label3 = Button(frameOone, text='Button-3',bg='yellow',height=10)
-label3.pack(side='left',fill = 'x')
+label = Label(frameoOne,text='Button-1',bg='yellow')
+label.grid(row=0,column=1)
 
-label4 = Button(frameOone, text='Button-4',bg='yellow',height=10)
-label4.pack(side='top',fill = 'x')
-
-label5 = Button(frameOone, text='Button-5',bg='yellow',height=10)
-label5.pack(side='top',fill = 'x')
+label = Label(frameoOne,text='Button-1',bg='yellow')
+label.grid(row=0,column=2)
 
 
-label5 = Button(frameOone, text='Button-6',bg='yellow',height=10)
-label5.pack(side='bottom',fill = 'x')
+label = Label(frameoOne,text='Button-1',bg='yellow')
+label.grid(row=0,column=3)
 
 
-label6 = Button(frameOone, text='Button-7',bg='yellow',height=10)
-label6.pack(side='right',fill = 'x')
+label = Label(frameoOne,text='Button-1',bg='yellow')
+label.grid(row=0,column=4)
+
+
+label = Label(frameoOne,text='Button-1',bg='yellow')
+label.grid(row=0,column=5)
+
+frameoOne1 = Frame(window,bg='green')
+frameoOne1.grid(row=1,column=0)
+
+label1 = Label(window,text='Button-1',bg='green')
+label1.grid(row=0,column=0)
+
+label1 = Label(frameoOne,text='Button-1',bg='yellow')
+label1.grid(row=0,column=2)
+
+label1 = Label(frameoOne,text='Button-1',bg='yellow')
+label1.grid(row=0,column=3)
+
+
+frameoOne2 = Frame(window,bg='pink')
+frameoOne2.grid(row=2,column=0)
+
+label1 = Label(frameoOne2,text='Button-1',bg='yellow')
+label1.grid(row=0,column=0)
+
+label1 = Label(frameoOne2,text='Button-1',bg='yellow')
+label1.grid(row=0,column=0)
+
+label1 = Label(frameoOne2,text='Button-1',bg='yellow')
+label1.grid(row=0,column=0)
+
+frameoOne3 = Frame(window,bg='pink')
+frameoOne3.grid(row=2, column=0)
+
+label1 = Label(frameoOne3,text='Button-1',bg='yellow')
+label1.grid(row=0,column=0)
+
+label1 = Label(frameoOne3,text='Button-1',bg='yellow')
+label1.grid(row=0,column=1)
+
+label1 = Label(frameoOne3,text='Button-1',bg='yellow')
+label1.grid(row=0,column=2)
+
+
+
+
 
 if __name__ == '__main__':
     window.mainloop()

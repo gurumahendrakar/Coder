@@ -46,20 +46,14 @@ button16 = Button(frameOtwo,text='=',width=11,justify='center',font='myfont.ttf 
 def calculate():
 
     if entrycalc:
-        intigers  = []
-        oprator_index =[]
-        for index,text in enumerate(entrycalc.get()):
-            if text in ('-','+','%','**','*','/','//'):
-                oprator_index.append((text,index))
+        a,sign,b = entrycalc.get().partition('*' or '/' or '%' or '+' or '-' or '**' or '//')
 
-            else:
-                intigers.append(text)
+        if sign == '*':
+            entrycalc.delete(0,END)
+            entrycalc.insert(0,int(a)*int(b))
+            # entrycalc.insert(0)
 
-        else:
-            intigers = ''.join(intigers)
-            intigers = int(intigers)
 
-    pri
 
 
 
