@@ -883,93 +883,93 @@
 
 
 
-# # rows = 0
-# # for row in a:
-# #     for colums in row:
-# #         if rows==0:
-# #             print(colums,end='    ')
-# #         else:
-# #             print(colums,end='   ')
-# #     rows+= 1
-# #     print()
+# rows = 0
+# for row in a:
+#     for colums in row:
+#         if rows==0:
+#             print(colums,end='    ')
+#         else:
+#             print(colums,end='   ')
+#     rows+= 1
+#     print()
 
-# # import os;import shutil
-# # file =[]
+# import os;import shutil
+# file =[]
 
-# # os.chdir(r'C:\Users\mahen\bitepy\yes')
-# # for transfer in os.listdir(os.getcwd()):
-# #     if transfer not in file:
-# #         shutil.move(transfer,'yes')
-# #     else:
-# #         print(transfer)
-# # print(os.getcwd()+'OIP.jpeg'.replace('\\\\','/'))
-# # dict = {'name':{'Guru':'Mahendrakar','Soul':'Mother'}}
-# # for i in dict:
-# #     for ii in dict[i]:
-# #         print(dict[i][ii])
-# # list = [1,1,3,2,5,8,9]
+# os.chdir(r'C:\Users\mahen\bitepy\yes')
+# for transfer in os.listdir(os.getcwd()):
+#     if transfer not in file:
+#         shutil.move(transfer,'yes')
+#     else:
+#         print(transfer)
+# print(os.getcwd()+'OIP.jpeg'.replace('\\\\','/'))
+# dict = {'name':{'Guru':'Mahendrakar','Soul':'Mother'}}
+# for i in dict:
+#     for ii in dict[i]:
+#         print(dict[i][ii])
+# list = [1,1,3,2,5,8,9]
 
-# # def quicksort(listing):
-# #     global list
-# #     pivot = listing[0]
-# #     a = 1
-# #     b = -1
+# def quicksort(listing):
+#     global list
+#     pivot = listing[0]
+#     a = 1
+#     b = -1
 
-# #     while not listing[a]>pivot:
-# #         a+= 1
-# #         print('Executed')
+#     while not listing[a]>pivot:
+#         a+= 1
+#         print('Executed')
 
-# #     while not listing[b]<=list[a]:
-# #         b-= 1
+#     while not listing[b]<=list[a]:
+#         b-= 1
 
-# #     if b<a:
-# #         list[pivot],list[b] = list[b],list[pivot]
+#     if b<a:
+#         list[pivot],list[b] = list[b],list[pivot]
 
-# #     else:
-# #         list[a],list[b] = list[a],list[b]
-
-
-# #     return listing
-
-# # print(quicksort(quicksort(quicksort(list))))
+#     else:
+#         list[a],list[b] = list[a],list[b]
 
 
-# #Please Note You Can Basic Learner Please Time Too Forloop With this type
+#     return listing
 
-# # integers= 0
-
-# # for row in range(6):
-# #     for colums in range(row+1):
-# #         print(integers,end=" ")
-# #         integers+= 1
-# #     integers = 0
-# #     print()
-
-# # for row in range(6):
-# #     for colums in range(row+1):
-# #         integers+= 1
-# #         print(integers,end=" ")
-
-# #     integers = 0
-# #     print()
-# # import random
-
-# # for rows in range(int(input("Enter Lines Of Number : "))):
-# #     for colums in range(random.randint(0,20)):
-# #         print(" ",end=" ")
+# print(quicksort(quicksort(quicksort(list))))
 
 
-# #     print("*",end=" ")
-# #     if rows%10==0:
-# #         print("Happy Birthday Guru Mahendrakar")
+# Please Note You Can Basic Learner Please Time Too Forloop With this type
+
+# integers= 0
+
+# for row in range(6):
+#     for colums in range(row+1):
+#         print(integers,end=" ")
+#         integers+= 1
+#     integers = 0
+#     print()
+
+# for row in range(6):
+#     for colums in range(row+1):
+#         integers+= 1
+#         print(integers,end=" ")
+
+#     integers = 0
+#     print()
+# import random
+
+# for rows in range(int(input("Enter Lines Of Number : "))):
+#     for colums in range(random.randint(0,20)):
+#         print(" ",end=" ")
 
 
-# # set1 = set([1,2,3,4])
-# # set2 = set([5,6,7,8])
+#     print("*",end=" ")
+#     if rows%10==0:
+#         print("Happy Birthday Guru Mahendrakar")
 
-# # print(set1.union(set2))
-# # print(set2.difference(set1))
-# # print(set1.intersection(set2))
+
+# set1 = set([1,2,3,4])
+# set2 = set([5,6,7,8])
+
+# print(set1.union(set2))
+# print(set2.difference(set1))
+# print(set1.intersection(set2))
 
 
 # import timeit
@@ -1277,7 +1277,7 @@
 # Target.name="Guru"
 # Target2.name = "Nitin"
 # Target.start()
-# Target2.start()
+Target2.start()
 # Target.join()
 # Target2.join()
 # print(time.time()-begin_time)
@@ -1320,44 +1320,44 @@
 # a = method()
 #
 #
-# for row in range(6):
-#     for colums in range(5-row):
-#         print(" ",end=" " )
-#     print("  * "*row,)
-#     print()
+for row in range(6):
+    for colums in range(5-row):
+        print(" ",end=" " )
+    print("  * "*row,)
+    print()
 
 
-# string = "a=8 b=9 c=7"
-# string = list(map(lambda a : a.split("="),string.split(" ")))
-# a = dict(map(lambda x : [x[0],int(x[1])] ,sorted(string,key= lambda x :x[1])))
+string = "a=8 b=9 c=7"
+string = list(map(lambda a : a.split("="),string.split(" ")))
+a = dict(map(lambda x : [x[0],int(x[1])] ,sorted(string,key= lambda x :x[1])))
 
-# print(a)
-#
-# from dataclasses import dataclass
-# @dataclass
-# class cool:
-#     bj = 'guruji'
-#
-#     b:3
-#
-#     def __str__(self):
-#         print('called')
-#         return "Called"
-#
-#     def __eq__(self, other):
-#         print("yo")
-#
-#
-#
-#
-#
-#     def yo(self):
-#         return "Cool brother"
-#
-# a = cool(7)
-# import dataclasses
-# print(dataclasses.asdict(a))
-# print(dataclasses.astuple(a))
+print(a)
+
+from dataclasses import dataclass
+@dataclass
+class cool:
+    bj = 'guruji'
+
+    b:3
+
+    def __str__(self):
+        print('called')
+        return "Called"
+
+    def __eq__(self, other):
+        print("yo")
+
+
+
+
+
+    def yo(self):
+        return "Cool brother"
+
+a = cool(7)
+import dataclasses
+print(dataclasses.asdict(a))
+print(dataclasses.astuple(a))
 
 
 
