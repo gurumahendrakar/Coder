@@ -20,7 +20,7 @@
     #     """isme Bataya hai ki class type me classObject  ---- __dict__ me kya farak hai
 
 
-    #     # (normal function and proctecter) me hi aap __doc__ string acces nahi kar sakte hai
+    #     # (normal function and proctecter) me hi aap __doc__ string acces  kar sakte hai
     #     # private me aap __doc__string access nahi kar sakte hai
 
     #     """
