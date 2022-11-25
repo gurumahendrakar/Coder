@@ -1,15 +1,15 @@
-# import tkinter.ttk
-# from tkinter import *
-# from PIL import *
-# from PIL import Image,ImageTk
-
+import tkinter.ttk
+from tkinter import *
+from PIL import *
+from PIL import Image,ImageTk
+from tkinter import filedialog,colorchooser
 
 # #---------------------------------------------------------Window Create-------------------------------------------------------------------------------
-# window = Tk() #Creating window
-# window.title("Practice")
-# window.iconbitmap(r"C:\Users\mahen\Downloads\icons8-wi-fi-fair-48 (1).ico")
+window = Tk() #Creating window
+window.title("Practice")
+window.iconbitmap(r"C:\Users\mahen\Downloads\icons8-wi-fi-fair-48 (1).ico")
 
-# window.geometry("400x400")
+window.geometry("400x400")
 
 
 # #------------------------------------------------------------Labels-------------------------------------------------------------------------------------------
@@ -504,73 +504,79 @@
 
 from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 
-window = Tk()
 
-window.title('Guru Mahendrakar')
-window.configure(bg='pink')
+#-------------------------------------------Toplevel_window____________________________________________________________
 
-frameoOne = Frame(window,bg='green')
-frameoOne.grid(row=0,column=0)
-
-label = Label(frameoOne,text='Button-1',bg='yellow')
-label.grid(row=0,column=0)
-
-label = Label(frameoOne,text='Button-1',bg='yellow')
-label.grid(row=0,column=1)
-
-label = Label(frameoOne,text='Button-1',bg='yellow')
-label.grid(row=0,column=2)
-
-
-label = Label(frameoOne,text='Button-1',bg='yellow')
-label.grid(row=0,column=3)
-
-
-label = Label(frameoOne,text='Button-1',bg='yellow')
-label.grid(row=0,column=4)
-
-
-label = Label(frameoOne,text='Button-1',bg='yellow')
-label.grid(row=0,column=5)
-
-frameoOne1 = Frame(window,bg='green')
-frameoOne1.grid(row=1,column=0)
-
-label1 = Label(window,text='Button-1',bg='green')
-label1.grid(row=0,column=0)
-
-label1 = Label(frameoOne,text='Button-1',bg='yellow')
-label1.grid(row=0,column=2)
-
-label1 = Label(frameoOne,text='Button-1',bg='yellow')
-label1.grid(row=0,column=3)
+# frameOone = Frame(window,bg='green')
+# frameOone.pack(side='left',anchor='nw')
+#
+# def toplevel():
+#
+#     # Ye SAme hamare original window tarah kaam karta hai
+#
+#     new = Toplevel(window) # Isko Pack or grid karne ki zarorat nahi hai
+#     button = Button(new,text='Click Me To Destroy',command=lambda  :   new.destroy())
+#     button.pack(side='left', fill='both', expand=1)
+#
+#
+# menu2 = Menu(window,tearoff=0)
+# menu2.add_command(label='newwindow',command=toplevel)
+# menu2.add_command(label='1')
+# menu2.add_command(label='2')
+# menu2.add_command(label='3')
+# menu2.add_command(label='4')
+#
+# menu = Menu(frameOone)
+# menu.add_cascade(label='Settings',menu = menu2)
+# window.config(menu=menu)
+#
 
 
-frameoOne2 = Frame(window,bg='pink')
-frameoOne2.grid(row=2,column=0)
-
-label1 = Label(frameoOne2,text='Button-1',bg='yellow')
-label1.grid(row=0,column=0)
-
-label1 = Label(frameoOne2,text='Button-1',bg='yellow')
-label1.grid(row=0,column=0)
-
-label1 = Label(frameoOne2,text='Button-1',bg='yellow')
-label1.grid(row=0,column=0)
-
-frameoOne3 = Frame(window,bg='pink')
-frameoOne3.grid(row=2, column=0)
-
-label1 = Label(frameoOne3,text='Button-1',bg='yellow')
-label1.grid(row=0,column=0)
-
-label1 = Label(frameoOne3,text='Button-1',bg='yellow')
-label1.grid(row=0,column=1)
-
-label1 = Label(frameoOne3,text='Button-1',bg='yellow')
-label1.grid(row=0,column=2)
+#--------------------------------------------Calendar & DataEntry---------------------------------------------------------
 
 
+
+# import tkcalendar
+#
+# a = StringVar()
+# def selected_date():
+#     print(calendar.get_date())
+#
+#
+# calendar = tkcalendar.Calendar(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy' )
+# calendar.pack(fill='both',expand=1)
+#
+#
+# button = Button(window,text='Submit',command=selected_date)
+# button.pack()
+#
+#
+# #-----------------------------------------------Data Entry ---------------------------------------------------
+#
+# calendar = tkcalendar.DateEntry(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy',state='readonly' )
+# calendar.pack(fill='both') # expand mat dena data entry me koi mat puch mujhe bhi malum nahi hai
+
+
+
+#--------------------------------------fieldlog------------------------------------------------------------------
+
+
+# fieldlogopen = filedialog.askopenfilename(initialdir= 'C:\\Users\\mahen\\bitepy',
+#                                        initialfile='texting.txt',
+#                                        filetypes=([('Texting Files','*.txt'),('Python Files','*.py'),("AllFiles",'*.*')]))
+#
+# print(fieldlogg) # Returned Selected Item
+#
+
+
+#-----------------------------------------filedialog.asksavesfile()--------------------------------------------------
+import os
+filedialogsaves  = filedialog.askopenfilename(initialdir=os.getcwd(),
+                                              filetypes=[("Textfilesave",".txt"),("Pythonfilesave",".py")])
+
+
+
+print(filedialogsaves)
 
 
 

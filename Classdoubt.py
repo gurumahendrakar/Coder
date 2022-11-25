@@ -88,6 +88,10 @@
 #     def __getattribute__(self,attribute):
 #             return self.__dict__[attribute]
 
+#     def __del__(self):
+#         print("Garbage Collecter Is Executed")
+		  # Ye Automaticlly __call__ hota hai jab program pura khatam hojata hai
+
 # class_helps = class_help()
 # class_helps.Guru = "Mahendrakar"
 # del class_helps.Guru
@@ -135,25 +139,159 @@
 
 
 
-class uou:
-    __slots__ = ['x','y']
+#-------------------------------------------Slots One More Examples_________________________________________________________________________________
 
 
-u = uou()
-u.x = 1
-u.y = 2
+# class uou:
+#     __slots__ = ['x','y']
+#
+#
+# u = uou()
+# u.x = 1
+# u.y = 2
+#
+#
+# class uou2(uou):
+#
+#     def __init__(self):
+#         self.name = "Guru Mahendrakar"
+#
+#
+#
+# uu = uou2()
+# uu.x = 1
+# uu.y = 2
+# uu.g = 3
+#
+#
+#
+# print(uou2.__dict__.get('__slots__',-1)) # jisme solt dala huva hai usko interhated karte ho to jisme daala hai usme class ke dict me __slots__ avilabel nahi rehta hai
 
 
-class uou2(uou):
 
-    def __init__(self):
-        self.name = "Guru Mahendrakar"
-        super().__init__()
+#----------------------------------------------- __get__ & __set__ & __set_name__ --------------------------------------------------------------
+
+#This is Also Important Please Leran Brother
+
+# class function:
+# 	def __set_name__(self, object, name):
+# 		print( " Owner : {}  OwnerClass_name :  {} ".format(object,object.__name__))
+# 		print("Object Created Name :  {} ".format(name))
+#
+# 	def __get__(self, instance,name):
+# 		return 'Guru'
+#
+#
+# 	def __set__(self, instance, value):
+# 		self.__dict__.update({instance:value})
+# 		print(self.__dict__)
+#
+#
+#
+# class function2:
+# 	function1  = function()
+#
+#
+#
+# fu = function2()
+#
+# fu.function1 = "Guru Mahendrakar"
+#
 
 
-uu = uou2()
-uu.x = 1
-uu.y 
-uu.g = 11
 
-print(uu.y)
+
+
+#-----------------------------------------isintance & issubclass--------------------------------------------------------
+
+#
+# class one:
+#
+# 	def __Yobrother(self):
+# 		print("Hey Man ! How Are You Brother")
+#
+#
+# class two(one):
+# 	pass
+#
+#
+# class three(two):
+# 	pass
+#
+# class four():
+# 	pass
+#
+# oneObject = one()
+# twoObject = two()
+# threeobject = three()
+#
+#
+# print(isinstance(oneObject,(one))) # oneObject  one class ka object hai kya -> True
+# print(isinstance(oneObject,(one,two))) # oneObject object (one or two) Me se kisika object hai -> True
+# print(isinstance(oneObject, (two))) # oneObject two Class Object Hai Kya -> False
+#
+# print(issubclass(two,one)) # -> two class ne one class inheritate kiya hai kya -> True
+# print(issubclass(one,two)) # -> one ne two class ko in inheritate kiya hai kya -> False
+# print(issubclass(three,(one,two,three))) #-> In Teeno Me Kisike Inheritate Kiya Hai Kya
+#
+#
+# print(help(three)) # Ye Batayega ki Konse Konse Class me jaake check karega -> (His return Docomention)
+#
+# # ----help--- docomention-----
+# #  |  Method resolution order:
+# #  |      three
+# #  |      two
+# #  |      one
+# #  |      builtins.object
+# #  |
+# #  |  Data descriptors inherited from one:
+# #  |
+# #  |  __dict__
+# #  |      dictionary for instance variables (if defined)
+# #  |
+# #  |  __weakref__
+# #  |      list of weak references to the object (if defined)
+#
+#
+#
+# print(three.mro()) # Ye list return karta hai
+
+
+# ---MRO LIST------
+# [<class '__main__.three'>, <class '__main__.two'>, <class '__main__.one'>, <class 'object'>]
+	#ISKE SAARE CLASS ATTRIBUTES
+
+
+
+#-------------------------------------------Private & Protectors-----------------------------------------
+
+# __ Private
+#_Protector
+
+
+# class one:
+#
+# 	def __yo(self):
+# 		return  ("Hey Man ! Whatsapp Buddy")
+#
+#
+#
+#
+# class two(one):
+# 	pass
+#
+# One = one()
+# Two = two()
+#
+# print(one.__dict__)
+#
+# #---------------------------------
+#
+# #Private --- Accesing ---
+# print(Two._one__yo())
+
+
+#------------------------------------
+
+
+
