@@ -1343,8 +1343,8 @@ y = 1
 z = 2
 finish = 0
 couting = 0
-previous_value = 0
-
+increase_couting = 0
+previous_stringlen = 0
 while finish!=len(symbols)-1:
     if finish==0:
         couting+= int(string_[:symbols[x]]) + int(string_[symbols[x]+1:symbols[y]])
@@ -1359,9 +1359,8 @@ while finish!=len(symbols)-1:
             del symbols_
 
     else:
-        '8*2*9*99*2-7'  # 2 4 5 9 10
+        '8*2*9*99*2-7' # -> [1,3,5,8,10]
 
 
-        print(string_[symbols[x]:symbols[y]-1],string_[symbols[y]:symbols[z]-1])
 
 print(couting)

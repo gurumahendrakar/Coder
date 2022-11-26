@@ -1,5 +1,7 @@
-petunia,5.95
-alyssum,3.95
-begonia,5.95
-sunflower,5.95
-coelius,5.95
+flowers,price
+petunia,200
+alyssum,2000
+begonia,3000
+sunflower,333
+coelius,333
+5

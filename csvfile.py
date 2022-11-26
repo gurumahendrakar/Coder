@@ -53,15 +53,30 @@
 #         for lists in (list(csv.DictReader(dictreader))):
 #             print(lists)
 #
-#
 
 
 import csv
-with open('texting.txt','w',newline='') as csvfile:
-    csvwriter = csv.DictWriter(csvfile,fieldnames=["flowers","price"])
+def flower_finder(filename,flowername:str):
+    with open('texting.txt','r+',newline='') as csvfile:
+        csvwriter = csv.DictWriter(csvfile,fieldnames=["flowers","price"])
+        csvwriter.writeheader()
 
-    csvwriter.writerows([{'flowers':'petunia','price':5.95},
-                         {'flowers':'alyssum','price':3.95},
-                         {'flowers':'begonia','price':5.95},
-                         {'flowers':'sunflower','price':5.95},
-                         {'flowers':'coelius','price':5.95}])
+        csvwriter.writerows([{'flowers':'petunia','price':200},
+                             {'flowers':'alyssum','price':2000},
+                             {'flowers':'begonia','price':3000},
+                             {'flowers':'sunflower','price':333},
+                             {'flowers':'coelius','price':333}])
+
+        with open(filename,'r+') as csvreader:
+            all_details = list(csv.DictReader(csvreader))
+
+            for o in all_details:
+
+                if o['flowers']==flowername:
+                    print('Flower name  : {}---------- selling Price Is : {} '.format(o['flowers'],o['price']))
+                    return
+            else:
+                print('--------------You Are Entered Flower is not here---------------')
+
+
+flower_finder('texting.txt','petunia')
