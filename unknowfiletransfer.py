@@ -16,7 +16,12 @@
 #
 # else:
 #     print("All Files Are Moved In Your Directory")
+#
+#
+# shutil.move(#kya Bhejna hai uska path,kidar bhejna hai uska path)
 
 
-#shutil.move(#kya Bhejna hai uska path,kidar bhejna hai uska path)
+
+
+
 

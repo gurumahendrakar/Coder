@@ -1,1 +1,5 @@
-Hlo Brother
+petunia,5.95
+alyssum,3.95
+begonia,5.95
+sunflower,5.95
+coelius,5.95

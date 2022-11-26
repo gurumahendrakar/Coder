@@ -505,7 +505,7 @@ window.geometry("400x400")
 from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 
 
-#-------------------------------------------Toplevel_window____________________________________________________________
+#-----------------------------------------------Toplevel_window____________________________________________________________
 
 # frameOone = Frame(window,bg='green')
 # frameOone.pack(side='left',anchor='nw')
@@ -536,7 +536,7 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 
 
 
-# import tkcalendar
+import tkcalendar
 #
 # a = StringVar()
 # def selected_date():
@@ -551,14 +551,19 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 # button.pack()
 #
 #
-# #-----------------------------------------------Data Entry ---------------------------------------------------
-#
-# calendar = tkcalendar.DateEntry(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy',state='readonly' )
-# calendar.pack(fill='both') # expand mat dena data entry me koi mat puch mujhe bhi malum nahi hai
+# #-------------------------------------------------------Data Entry ---------------------------------------------------
+
+def date_picker():
+    print("Your Date Is : {} ".format(calendar.get_date()))
+
+calendar = tkcalendar.DateEntry(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy',state='readonly' )
+calendar.pack(fill='both') # expand mat dena data entry me koi mat puch mujhe bhi malum nahi hai
+
+button = Button(window,text='Hy Bro',command=date_picker)
+button.pack()
 
 
-
-#--------------------------------------fieldlog------------------------------------------------------------------
+#------------------------------------------------------fieldlog------------------------------------------------------------------
 
 
 # fieldlogopen = filedialog.askopenfilename(initialdir= 'C:\\Users\\mahen\\bitepy',
@@ -569,15 +574,27 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 #
 
 
-#-----------------------------------------filedialog.asksavesfile()--------------------------------------------------
+#-----------------------------------------------------filedialog.asksavesfile()--------------------------------------------------
 import os
-filedialogsaves  = filedialog.askopenfilename(initialdir=os.getcwd(),
-                                              filetypes=[("Textfilesave",".txt"),("Pythonfilesave",".py")])
+# filedialogsaves  = filedialog.asksaveasfile(initialdir=os.getcwd(),
+#                                               filetypes=[("Textfilesave",".txt"),("Pythonfilesave",".py")])
+#
+#
+#
+# print(filedialogsaves.write('Guruji Mahendrakar'))
+#
 
 
+#---------------------------------------------Canvas------------------------------------------------------------------------------
 
-print(filedialogsaves)
 
+canvas = Canvas(window,bg='yellow',height=250,width=250)
+canvas.pack()
+
+line = canvas.create_line(0,0,250,10)
+squrebracket = canvas.create_rectangle(40,100,200,200)
+round = canvas.create_oval(20,20,80,50)
+s = canvas.create_arc(0,90,240,250,width = 10,fill='green', )
 
 
 if __name__ == '__main__':

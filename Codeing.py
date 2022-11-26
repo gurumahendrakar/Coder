@@ -1327,8 +1327,6 @@
 #
 # print(a)
 
-
-
 string_ = '8*2*9*99*2-7'
 
 symbols = []
@@ -1340,12 +1338,30 @@ for index,text  in enumerate(string_):
         symbols.append(string_.index(text,index))
 
 
+x = 0
+y = 1
+z = 2
+finish = 0
+couting = 0
+previous_value = 0
 
-print(symbols)
+while finish!=len(symbols)-1:
+    if finish==0:
+        couting+= int(string_[:symbols[x]]) + int(string_[symbols[x]+1:symbols[y]])
+        finish+=1
+        symbols_ = []
+        for index_changeing in symbols:
+            symbols_.append(index_changeing+1)
 
-i = 0
-b = 0
-while i!=len(symbols)-1:
-    b+= int(string_[:symbols[i]]) + int(string_[symbols[i]+1:symbols[i+1]])
-    print(b)
-    i+=1
+        else:
+            symbols.clear()
+            symbols  = symbols_ + symbols
+            del symbols_
+
+    else:
+        '8*2*9*99*2-7'  # 2 4 5 9 10
+
+
+        print(string_[symbols[x]:symbols[y]-1],string_[symbols[y]:symbols[z]-1])
+
+print(couting)

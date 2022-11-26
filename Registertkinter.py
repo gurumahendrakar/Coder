@@ -5,7 +5,10 @@ import tkinter.font
 framecolor = 'black'
 window = tkinter.Tk()
 window.config(bg='white')
-window.geometry('500x500')
+screenwidth = window.winfo_screenwidth()
+screenheight = window.winfo_screenheight()
+
+window.geometry('250x250')
 # window.resizable(False,False)
 RegisterFrame = tkinter.Frame(window,highlightbackground='gray',highlightthickness=3, bg='white')
 RegisterFrame.grid(row=0,column=0,sticky=tkinter.W)
