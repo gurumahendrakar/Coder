@@ -1329,9 +1329,13 @@
 
 
 
-o = '66-333+3333-33+333/2'
+o = '553+333+33+333-33-55/2+555+33/2+3+5'
+
+old_indexs = []
+print(o)
 after_split = ''
 oU = []
+
 
 class basic_calculater:
 
@@ -1347,6 +1351,7 @@ class basic_calculater:
 
 
     def spliter(self):
+
         global after_split
         self.index_s()
 
@@ -1360,10 +1365,13 @@ class basic_calculater:
         else:
             list_int =  after_split.split('-')
             globals()['list_int'] = list_int
+            print(list_int)
             return self.calculating_()
 
 
     def calculating_(self):
+        devide_true = 0
+        old_indexs = list_int.copy()
         x = 0
         y = 1
         over = 0
@@ -1371,29 +1379,61 @@ class basic_calculater:
         counter = 0
 
         while over  !=len(list_int)-1:
+
             if o[oU[over]]=='*':
-                counter+= int(list_int[x])  * int(list_int[y])
+                counter = int(list_int[x])  * int(list_int[y])
 
 
             elif o[oU[over]] == '-':
-                counter += int(list_int[x]) - int(list_int[y])
+                counter = int(list_int[x]) - int(list_int[y])
 
 
             elif o[oU[over]]=='+':
-                counter+= int(list_int[x])  + int(list_int[y])
+
+                counter = int(list_int[x])  + int(list_int[y])
+                print(list_int[x]  , int(list_int[y]),'addition Couting ----',counter)
 
 
             elif o[oU[over]]=='/':
-                counter+= int(list_int[x])  / int(list_int[y])
+
+                old = int(old_indexs[x]) // int(old_indexs[y])
+
+                del list_int[y]
+                list_int.insert(y,old)
+
+                if over<=len(oU)-1:
+                    print('index',over)
+                    if o[oU[over+1]]!='/':
+                        counter = int(list_int[x]) +int(list_int[y])
+                        devide_true = 0
+
+                    else:
+
+                        devide_true =1
 
 
+            del list_int[y]
+            if devide_true:
+
+                list_int.insert(y,old)
+
+
+            else:
+                list_int.insert(y,counter)
+            x+=1
+            y+=1
             over+=1
         else:
+            print(list_int)
             return counter
 
 oou = basic_calculater()
-print(oou.spliter())
-print(oU)
+print('my result ',oou.spliter())
+print('eval result',eval(o))
+print(o)
+print(old_indexs)
+
+
 
 
 
