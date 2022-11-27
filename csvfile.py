@@ -71,12 +71,7 @@ def flower_finder(filename,flowername:str):
             all_details = list(csv.DictReader(csvreader))
 
             for o in all_details:
-
-                if o['flowers']==flowername:
-                    print('Flower name  : {}---------- selling Price Is : {} '.format(o['flowers'],o['price']))
-                    return
-            else:
-                print('--------------You Are Entered Flower is not here---------------')
+                print(o)
 
 
 flower_finder('texting.txt','petunia')

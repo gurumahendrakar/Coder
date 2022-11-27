@@ -1327,40 +1327,73 @@
 #
 # print(a)
 
-string_ = '8*2*9*99*2-7'
-
-symbols = []
-integers = []
-for index,text  in enumerate(string_):
-
-    if text==('*') or text==('/') or text==('//') or text==('-'):
-
-        symbols.append(string_.index(text,index))
 
 
-x = 0
-y = 1
-z = 2
-finish = 0
-couting = 0
-increase_couting = 0
-previous_stringlen = 0
-while finish!=len(symbols)-1:
-    if finish==0:
-        couting+= int(string_[:symbols[x]]) + int(string_[symbols[x]+1:symbols[y]])
-        finish+=1
-        symbols_ = []
-        for index_changeing in symbols:
-            symbols_.append(index_changeing+1)
+o = '66-333+3333-33+333/2'
+after_split = ''
+oU = []
+
+class basic_calculater:
+
+    def index_s(self):
+        global  after_split
+
+        for sp in o:
+            if sp=='-' or sp=='+' or sp=='/' or sp=='*':
+                oU.append(o.index(sp))
 
         else:
-            symbols.clear()
-            symbols  = symbols_ + symbols
-            del symbols_
-
-    else:
-        '8*2*9*99*2-7' # -> [1,3,5,8,10]
+           print('Indexing Completed!')
 
 
+    def spliter(self):
+        global after_split
+        self.index_s()
 
-print(couting)
+        for sp in o:
+            if sp=='-' or sp=='+' or sp=='/' or sp=='*':
+                after_split+='-'
+
+            else:
+                after_split+=sp
+
+        else:
+            list_int =  after_split.split('-')
+            globals()['list_int'] = list_int
+            return self.calculating_()
+
+
+    def calculating_(self):
+        x = 0
+        y = 1
+        over = 0
+
+        counter = 0
+
+        while over  !=len(list_int)-1:
+            if o[oU[over]]=='*':
+                counter+= int(list_int[x])  * int(list_int[y])
+
+
+            elif o[oU[over]] == '-':
+                counter += int(list_int[x]) - int(list_int[y])
+
+
+            elif o[oU[over]]=='+':
+                counter+= int(list_int[x])  + int(list_int[y])
+
+
+            elif o[oU[over]]=='/':
+                counter+= int(list_int[x])  / int(list_int[y])
+
+
+            over+=1
+        else:
+            return counter
+
+oou = basic_calculater()
+print(oou.spliter())
+print(oU)
+
+
+

@@ -588,13 +588,34 @@ import os
 #---------------------------------------------Canvas------------------------------------------------------------------------------
 
 
-canvas = Canvas(window,bg='yellow',height=250,width=250)
-canvas.pack()
+# canvas = Canvas(window,bg='yellow',height=250,width=250)
+# canvas.pack()
+#
+# line = canvas.create_line(0,0,250,10)
+# squrebracket = canvas.create_rectangle(40,100,200,200)
+# round = canvas.create_oval(20,20,80,50)
+# s = canvas.create_arc(0,90,240,250,width = 10,fill='green', )
 
-line = canvas.create_line(0,0,250,10)
-squrebracket = canvas.create_rectangle(40,100,200,200)
-round = canvas.create_oval(20,20,80,50)
-s = canvas.create_arc(0,90,240,250,width = 10,fill='green', )
+
+#------------------------------------------------------------Notebook-----------------------------------------------------------------------------------------
+
+
+
+notebook = tkinter.ttk.Notebook(window)
+
+frame = Frame(notebook,width=400,height=400)
+frame.pack(expand='True',fill='both')
+frame2 = Frame(notebook,width=500,height=333)
+frame2.pack(fill='both',expand=1)
+
+
+button = Button(frame,text="Hey I'm Guru Brother")
+button.pack(fill='both')
+
+notebook.add(frame,text='Hey Man! click me')
+notebook.pack(expand=1,fill='both')
+notebook.add(frame2,text='hlo Man Brother to you')
+
 
 
 if __name__ == '__main__':
