@@ -1342,9 +1342,9 @@ class basic_calculater:
     def index_s(self):
         global  after_split
 
-        for sp in o:
+        for index,sp in enumerate(o):
             if sp=='-' or sp=='+' or sp=='/' or sp=='*':
-                oU.append(o.index(sp))
+                oU.append(o.index(sp,index))
 
         else:
            print('Indexing Completed!')
@@ -1377,6 +1377,7 @@ class basic_calculater:
         over = 0
 
         counter = 0
+        print('Original INDEx-------- ',oU)
 
         while over  !=len(list_int)-1:
 
@@ -1393,39 +1394,9 @@ class basic_calculater:
                 counter = int(list_int[x])  + int(list_int[y])
                 print(list_int[x]  , int(list_int[y]),'addition Couting ----',counter)
 
-
             elif o[oU[over]]=='/':
-
-                old = int(old_indexs[x]) // int(old_indexs[y])
-
-                del list_int[y]
-                list_int.insert(y,old)
-
-                if over<=len(oU)-1:
-                    print('index',over)
-                    if o[oU[over+1]]!='/':
-                        counter = int(list_int[x]) +int(list_int[y])
-                        devide_true = 0
-
-                    else:
-
-                        devide_true =1
-
-
-            del list_int[y]
-            if devide_true:
-
-                list_int.insert(y,old)
-
-
-            else:
-                list_int.insert(y,counter)
-            x+=1
-            y+=1
-            over+=1
-        else:
-            print(list_int)
-            return counter
+                
+          
 
 oou = basic_calculater()
 print('my result ',oou.spliter())

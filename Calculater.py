@@ -1,18 +1,18 @@
 import tkinter
 from tkinter import ttk,Tk as tk
-from tkinter import messagebox,Entry,Button,Scrollbar,Frame,END
+from tkinter import *
 
 icon = r"C:\Users\mahen\Downloads\Papirus-Team-Papirus-Mimetypes-App-x-designer.ico"
 window = tk()
 window.iconbitmap(icon)
 window.title("Calculater")
-window.geometry('306x384')
+window.geometry('305x387')
 
 # window.resizable(width=False,height=False)
 
 
-frameOone = Frame(window,bg='black',border=2)
-frameOone.grid(row=0,column=0,sticky='nw',padx=(1.5,0))
+frameOone = Frame(window,bg='black',highlightcolor='gray',highlightthickness=3)
+frameOone.grid(row=0,column=0,sticky='nw')
 
 entrycalc = Entry(frameOone,width=27,bg='black',fg='white',borderwidth=0,font='15',state='normal')
 entrycalc.grid(row=0, column=0,pady=(90,0),sticky='nw')
@@ -20,7 +20,7 @@ entrycalc.grid(row=0, column=0,pady=(90,0),sticky='nw')
 
 
 frameOtwo = Frame(window,width=100,height=200)
-frameOtwo.grid( row=1,column=0,sticky='nw',padx=(1.3,7))
+frameOtwo.grid( row=1,column=0,sticky='nw')
 
 buttonmod = Button(frameOtwo,text='%',width=11,height=3,justify='center',font='myfont.ttf 8')
 buttonc = Button(frameOtwo,text='C',width=11,height= 3,justify='center',font='myfont.ttf 8',foreground='red')
@@ -39,24 +39,24 @@ button10 = Button(frameOtwo,text=8,width=11,justify='center',font='myfont.ttf 8'
 button11 = Button(frameOtwo,text=9,width=11,justify='center',font='myfont.ttf 8',height=3,)
 button12 = Button(frameOtwo,text='-',width=11,justify='center',font='myfont.ttf 8',height=3,)
 button13  = Button(frameOtwo,text='**',width=11,justify='center',font='myfont.ttf 8',height=3,)
-button14 = Button(frameOtwo,text='0',width=11,justify='center',font='myfont.ttf 8',height=3,)
+button14 = Button(frameOtwo,text='//',width=11,justify='center',font='myfont.ttf 8',height=3,)
 button15 = Button(frameOtwo,text='.',justify='center',font='myfont.ttf 8',height=3,width=11)
 button16 = Button(frameOtwo,text='=',width=11,justify='center',font='myfont.ttf 8',height=3,)
 
 def calculate():
-    try:
-        e = eval(entrycalc.get())
-        entrycalc.delete(0,END)
-        entrycalc.insert(0,e)
-    except ZeroDivisionError:
-        messagebox.showerror('ZeroDivision Error','You Can\'t Devide With Zero')
+    if entrycalc:
+        oprator_index =[]
+        for index,text in enumerate(entrycalc.get()):
+            if text in ('-','+','%','**','*','/','//'):
+                if text[index-1]==text[index] and text in ('-','+','%','**','*','/','//') :
+                    oprator_index.append(text+text.index(text,index))
+                else:
+
 def X():
     entrycalc.delete(len(entrycalc.get())-1,END)
 
 def C():
     entrycalc.delete(0,END)
-
-
 
 buttonmod.config( command= lambda  : entrycalc.insert(END, buttonmod.cget('text')),bg='green',fg='white')
 buttonc.config(command=C,bg='green',fg='white')
