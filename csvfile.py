@@ -72,54 +72,87 @@
 
 #             for o in all_details:
 #                 print(o)
-
-
 # flower_finder('texting.txt','petunia')
 
 
-string = '200/2+77+2/2/2'
-print(string)
-index_ = []
+
+string_ = '888/33/52+555-5-3+3+3/3+5+3/2+55/2*96*85/8+56'
+
+print(string_)
+operator_index = []
 new_string = ''
-value = 0 
+onemore_stirng_ = ''
+twomore_string = ''
+class Ool:
 
-for txt in string:
-    if txt in '*/-+':
-        new_string+='-'
-    else:
-        new_string+=txt
+    def spliting(self):
+        global  new_string
+        for txt in string_:
+            if txt in '*/-+':
+                new_string += '-'
+            else:
+                new_string += txt
+
+    def indexing_adder(self):
+        for index, i in enumerate(string_):
+
+            if i in '+/-*':
+                operator_index.append(string_.index(i, index))
 
 
-for index,i in enumerate(string):
+    def devide_cal(self,index_list: list):
+        global onemore_stirng_
+        one_time = True
+        x,y,idx_counter = 0,1,0
+        devide_couting = 0
 
-    if i in '+/-*':
-        index_.append(string.index(i,index))
+        while idx_counter<len(index_list):
+            if string_[operator_index[idx_counter]]=='/':
 
-newlist = new_string.split('-')
-newlist = list(map(int,newlist))
-x,y,w,c,old,value = 0,1,0,0,newlist.copy(),0
-print('_indexs len is : {}'.format(len(index_)))
-while w<=len(index_)-1:
-    
-    if w <=len(index_)-1:
-        print('Show Error--------------')
-        print(newlist)
-        if string[index_[w]]=='/':
-            if string[index_[w+1]]=='/':
-                if value==0 and string[index_[w+1]]=='/':
-                    old_value = old[x]/old[y]
-                    del newlist[y]
-                    newlist.insert(y,old_value)
-                    value+=1
+                if y<=len(numbers_index)-2:
+
+                    if string_[operator_index[idx_counter+1]]=='/':
+
+                        devide_couting = numbers_index[x] / numbers_index[y]
+                        print('Devide Couting ' ,devide_couting)
+                        numbers_index[y] = devide_couting
+
+                    else:
+                        if onemore_stirng_:
+                            if onemore_stirng_[-1].isdigit():
+                                onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)-1]
+                                onemore_stirng_+= str(numbers_index[x] / numbers_index[y])
+                            else:
+                                onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)]
+                                onemore_stirng_ += str(numbers_index[x] / numbers_index[y])
+
+                        devide_couting = 0
+
                 else:
-                    del newlist[y]
-                    newlist.insert(y,newlist[x]/newlist[y])
-                    value=0
+
+                    if onemore_stirng_[-1].isdigit():
+                        onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)-2]
+                        onemore_stirng_+= str(numbers_index[x] / numbers_index[y])
+
+                    else:
+                        onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)]
+                        onemore_stirng_ += str(numbers_index[x] / numbers_index[y])
 
             else:
-                print('Hey I\'m Another Oprator')
+                if one_time:
+                    one_time = False
+                    onemore_stirng_+= str(numbers_index[x] ) + string_[operator_index[idx_counter]]+ str(numbers_index[y])
+                else:
+                    if y<len(numbers_index)-2:
+                        onemore_stirng_ += string_[operator_index[idx_counter]] +str(numbers_index[y])
+            x,y = x+1,y+1
+            idx_counter+=1
 
-    x,y,w= x+1,y+1,w+1
-        
-print('Result---',newlist)
-print('eval result',eval(string))
+Oo = Ool()
+Oo.spliting()
+Oo.indexing_adder()
+
+numbers_index = list(map(int,new_string.split('-')))
+Oo.devide_cal(operator_index)
+
+print(onemore_stirng_)
