@@ -76,7 +76,8 @@ import os
 
 
 
-string_ = '33/3/3+5+3+5+3/33+99+6+658+5/8+9+62+972+5+586+58+8/8/5/58/8+99/8/8/8/8/8*8'
+string_ = '58/8/8/8/55+6+632+5+5698+852+5+5+555/8+5+55555+5555+69+69999/8+8889+6+69659+58+5456555555555555555/2/2/2/2/2/2'
+print(len(string_))
 
 print(string_)
 operator_index = []
@@ -122,9 +123,7 @@ class Ool:
         while idx_counter<len(index_list):
 
             if string_[operator_index[idx_counter]]=='/':
-
                 if operator_index[-1] == string_.index(string_[operator_index[idx_counter]],operator_index[idx_counter]):
-
                     onemore_stirng_ = onemore_stirng_[:self.___indexfinder(onemore_stirng_)[-1]]
 
                     onemore_stirng_+= string_[operator_index[idx_counter-(count+1)]] + str(numbers_index[x] / numbers_index[y])
@@ -138,17 +137,17 @@ class Ool:
                         numbers_index[y] = devide_couting
 
                     else:
-                        if onemore_stirng_:
+                        if self.___indexfinder(onemore_stirng_):
                             onemore_stirng_ = onemore_stirng_[:self.___indexfinder(onemore_stirng_)[-1]]
-                            
 
-                            find_ = ''
                             if count==0:
                                 onemore_stirng_+= string_[operator_index[idx_counter-1]] +   str(numbers_index[x] / numbers_index[y])
 
+                            else:
+                                onemore_stirng_ += string_[operator_index[idx_counter - (count+1)]] + str(numbers_index[x] / numbers_index[y])
+                                count = 0
                         else:
-                            onemore_stirng_ += string_[operator_index[idx_counter - (count+1)]] + str(numbers_index[x] / numbers_index[y])
-                            count = 0
+                            onemore_stirng_+= str(numbers_index[x] / numbers_index[y])
 
             else:
                 if one_time:
@@ -160,13 +159,22 @@ class Ool:
             x,y = x+1,y+1
             idx_counter+=1
 
+
+
+
+
+
 Oo = Ool()
 Oo.spliting()
 Oo.indexing_adder()
 
-numbers_index = list(map(int,new_string.split('-')))
-Oo.devide_cal(operator_index)
+try:
+    numbers_index = list(map(int,new_string.split('-')))
+    Oo.devide_cal(operator_index)
 
-print(onemore_stirng_)
-print(onemore_stirng_.strip('/'))
-print(eval(string_))
+    print(onemore_stirng_)
+    print(eval(onemore_stirng_.strip('+')))
+    print(eval(string_))
+
+except:
+    raise ValueError('Please Check Giving Value')
