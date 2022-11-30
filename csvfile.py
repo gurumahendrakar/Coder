@@ -53,7 +53,7 @@
 #         for lists in (list(csv.DictReader(dictreader))):
 #             print(lists)
 #
-
+import os
 
 # import csv
 # def flower_finder(filename,flowername:str):
@@ -76,7 +76,7 @@
 
 
 
-string_ = '888/33/52+555-5-3+3+3/3+5+3/2+55/2*96*85/8+56'
+string_ = '33/3/3+5+3+5+3/33+99+6+658+5/8+9+62+972+5+586+58+8/8/5/58/8+99/8/8/8/8/8*8'
 
 print(string_)
 operator_index = []
@@ -84,6 +84,18 @@ new_string = ''
 onemore_stirng_ = ''
 twomore_string = ''
 class Ool:
+
+
+
+    def ___indexfinder(self,string):
+
+        storer = []
+        for index,i in enumerate(string):
+            if i in '/+-*':
+                storer.append(onemore_stirng_.index(i,index))
+
+        else:
+            return storer
 
     def spliting(self):
         global  new_string
@@ -95,56 +107,56 @@ class Ool:
 
     def indexing_adder(self):
         for index, i in enumerate(string_):
-
             if i in '+/-*':
                 operator_index.append(string_.index(i, index))
+
 
 
     def devide_cal(self,index_list: list):
         global onemore_stirng_
         one_time = True
+
         x,y,idx_counter = 0,1,0
         devide_couting = 0
-
+        count = 0
         while idx_counter<len(index_list):
+
             if string_[operator_index[idx_counter]]=='/':
+
+                if operator_index[-1] == string_.index(string_[operator_index[idx_counter]],operator_index[idx_counter]):
+
+                    onemore_stirng_ = onemore_stirng_[:self.___indexfinder(onemore_stirng_)[-1]]
+
+                    onemore_stirng_+= string_[operator_index[idx_counter-(count+1)]] + str(numbers_index[x] / numbers_index[y])
+
 
                 if y<=len(numbers_index)-2:
 
                     if string_[operator_index[idx_counter+1]]=='/':
-
+                        count+=1
                         devide_couting = numbers_index[x] / numbers_index[y]
-                        print('Devide Couting ' ,devide_couting)
                         numbers_index[y] = devide_couting
 
                     else:
                         if onemore_stirng_:
-                            if onemore_stirng_[-1].isdigit():
-                                onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)-1]
-                                onemore_stirng_+= str(numbers_index[x] / numbers_index[y])
-                            else:
-                                onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)]
-                                onemore_stirng_ += str(numbers_index[x] / numbers_index[y])
+                            onemore_stirng_ = onemore_stirng_[:self.___indexfinder(onemore_stirng_)[-1]]
+                            
 
-                        devide_couting = 0
+                            find_ = ''
+                            if count==0:
+                                onemore_stirng_+= string_[operator_index[idx_counter-1]] +   str(numbers_index[x] / numbers_index[y])
 
-                else:
-
-                    if onemore_stirng_[-1].isdigit():
-                        onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)-2]
-                        onemore_stirng_+= str(numbers_index[x] / numbers_index[y])
-
-                    else:
-                        onemore_stirng_ = onemore_stirng_[:len(onemore_stirng_)]
-                        onemore_stirng_ += str(numbers_index[x] / numbers_index[y])
+                        else:
+                            onemore_stirng_ += string_[operator_index[idx_counter - (count+1)]] + str(numbers_index[x] / numbers_index[y])
+                            count = 0
 
             else:
                 if one_time:
                     one_time = False
-                    onemore_stirng_+= str(numbers_index[x] ) + string_[operator_index[idx_counter]]+ str(numbers_index[y])
+                    onemore_stirng_+=  str(numbers_index[x]) + str(string_[operator_index[idx_counter]]) + str(numbers_index[y])
                 else:
-                    if y<len(numbers_index)-2:
-                        onemore_stirng_ += string_[operator_index[idx_counter]] +str(numbers_index[y])
+                    onemore_stirng_+= str(string_[operator_index[idx_counter]]) + str(numbers_index[y])
+
             x,y = x+1,y+1
             idx_counter+=1
 
@@ -156,3 +168,5 @@ numbers_index = list(map(int,new_string.split('-')))
 Oo.devide_cal(operator_index)
 
 print(onemore_stirng_)
+print(onemore_stirng_.strip('/'))
+print(eval(string_))
