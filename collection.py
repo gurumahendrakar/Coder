@@ -75,8 +75,8 @@ import collections
 
 
 # chain_map.update({"a":"Guru Mahendrakar"}) # value sirf first vali dict me change honge
-# #updated value :-> ChainMap({'a': 'Guru Mahendrakar', 'b': 20}, {'c': 30, 'd': 40}, {'e': 50, 'f': 69})
 # #original value :-> ChainMap({'a': 10, 'b': 20}, {'c': 30, 'd': 40}, {'e': 50, 'f': 69})
+# #updated value :-> ChainMap({'a': 'Guru Mahendrakar', 'b': 20}, {'c': 30, 'd': 40}, {'e': 50, 'f': 69})
 
 # print(chain_map)
 

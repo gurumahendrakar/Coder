@@ -295,3 +295,17 @@
 
 
 
+import collections
+
+#
+# class method:
+#     __slots__ =  ['one','two','three']
+#
+#
+#
+# a = method()
+# a.one = "Hey Buddy"
+#
+# print(a.one)
+
+

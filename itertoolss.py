@@ -14,7 +14,7 @@ print(list(itertools.accumulate(lists,func=operator.add)))
 
 
 # a = itertools.chain([1,2,3,4,5],[6,7,8,9,10],[11,12,13,14]) # return iterator
-# output : - [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+# output : - [1,2,3,4,5,6,7,8,9,10,11,12,13,14] # jo iterables doge usko o addition karke ek list bana deta hai
 # for i in a:
 #     print(i)
 
@@ -31,7 +31,8 @@ print(list(itertools.accumulate(lists,func=operator.add)))
 # b = itertools.combinations([1,2,3,4,5],3)
 # c = itertools.combinations_with_replacement([1,2,3,4,5],2) # same but ye kuch extra combinations dega
 
-# #output dhekh ke samajlo: 
+# #output dhekh ke samajlo:
+
 # # output : -> [(1, 2, 3), (1, 2, 4), (1, 2, 5), (1, 3, 4), (1, 3, 5), (1, 4, 5), (2, 3, 4), (2, 3, 5), (2, 4, 5), (3, 4, 5)]
 
 # print(list(b))
@@ -64,6 +65,14 @@ print(list(itertools.dropwhile(lambda a :  a<=2 ,[1,2,3,5,6]))) # jo false hoga 
 # ye sirf less than greater than pe work karega
 
 
+#----------------------------------------itertoools.count-------------------------------------
+# itertools.count------
+a = itertools.count(start = 1 ,step=1)
+# ye while loop ki tarha condition lagake hi stop kar sakte ho
+
+# start -1 se start hoga step one + one increase karta jayega
+
+
 
 #..................................itertools.groupby....
 
@@ -83,8 +92,7 @@ print(list(itertools.dropwhile(lambda a :  a<=2 ,[1,2,3,5,6]))) # jo false hoga 
 #3,3,3,3
 
 
-
-
+#
 # a =itertools.groupby('baddajljdj',key = lambda x: x=='a')
 # False _ ['b']
 # True _ ['a']

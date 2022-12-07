@@ -2,9 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b68bc35-0a2c-412f-8f56-6bdd5b0956ff" name="Changes" comment="'fonts'">
+      <change afterPath="$PROJECT_DIR$/Firsttimehappycal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance_min_sorted_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicplayer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/os_shutil.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1302700-4k-resolution-wallpaper-1920x1080-windows.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classdoubt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classdoubt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Codeing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codeing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inkfree.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OIP (1).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/OIP (1).jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OIP.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/OIP.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/collection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csvfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/csvfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dogresize_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hlo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/itertoolss.py" beforeDir="false" afterPath="$PROJECT_DIR$/itertoolss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfont2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfont4.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonlogging.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonlogging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/texting2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadingwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/threadingwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tkinterlearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/tkinterlearning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unknowfiletransfer.py" beforeDir="false" afterPath="$PROJECT_DIR$/unknowfiletransfer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +65,12 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mahen/bitepy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mahen/bitepy/Codeing.py&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration name="tkinterlearning" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Codeing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bitepy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -54,7 +82,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tkinterlearning.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codeing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -65,7 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tkinterlearning" />
+        <item itemvalue="Python.Codeing" />
       </list>
     </recent_temporary>
   </component>

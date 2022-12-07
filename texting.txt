@@ -1,8 +1,0 @@
-petunia,200
-alyssum,2000
-begonia,3000
-sunflower,333
-coelius,333
-
-coelius,333
-5

@@ -1,0 +1,13 @@
+class method:
+ 2022-12-06 19:09:05,960 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:09:08,929 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:09:10,068 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:09:23,801 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:09:24,018 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:09:36,989 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:09:53,203 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:10:24,267 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:10:35,355 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:18:13,466 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:18:16,077 WARNING __main__ Hey Man I M The Best Warning For You! 
+ 2022-12-06 19:18:16,854 WARNING __main__ Hey Man I M The Best Warning For You! 

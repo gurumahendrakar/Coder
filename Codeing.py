@@ -1332,5 +1332,65 @@
 #iadd - means iterable to iterable ko plus karna hai to iadd use karo
 
 
-import webbrowser
+
+# import itertools
+# import operator
+# import collections
+#
+#
+# a = itertools.combinations([1,2,3,4,5],3)
+# b = itertools.permutations([1,2,3,4,5],3)
+# c = itertools.chain([1,2,3,4,5]) # generator return
+# d = itertools.count(start = 1 ,step=1) # end nahi hai isme aap if else lagake break maroge to hi break hoga
+# e = itertools.groupby('aaabbbcccjlabioup',key= lambda x :  x=='a' or x=='b')
+#
+# print(list(a))
+# print(list(b))
+# print(list(c))
+# # print(list(d))
+#
+# for x in e :
+#     print(x[0],list(x[1]))
+#
+# print(list(itertools.islice([1,2,3,4,5],0,2)))
+#
+
+
+
+#
+#
+# dict = [{"Car":50000},{"Car":20000},{"Car":30000}]
+#
+#
+# min = min(dict,key=lambda x: x['Car'])
+# max = max(dict,key=lambda x: x['Car'])
+# sorted = sorted(dict,key=lambda x:x['Car'])
+#
+# print(min) # min(iterable,key=func)
+# print(max) # max(iterable,key=func)
+# print(sorted) # sorted(iterable,key=func)
+
+#
+# string = "Guru Mahe\ ndrakar  Ståle "
+#
+# print(string.encode(encoding= 'utf-8'))
+#
+# p = (string.encode('latin-1'))
+#
+# print(p.decode(encoding='latin-1'))
+
+
+# enocodeing = bytes(s,encoding = 'utf-8')
+#
+# print(enocodeing.decode(encoding='utf-8'))
+#
+#
+# butes = bytearray('Guruji',encoding='latin-1')
+# butes[0] = 65
+#
+# print(butes.decode('latin-1'))
+#
+
+
+import time 
 

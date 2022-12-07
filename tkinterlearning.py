@@ -598,26 +598,60 @@ import os
 
 
 #------------------------------------------------------------Notebook-----------------------------------------------------------------------------------------
+#
+# print("Hey Man !")
+#
+# notebook = tkinter.ttk.Notebook(window)
+#
+# frame = Frame(notebook,width=400,height=400)
+# frame.pack(expand='True',fill='both')
+# frame2 = Frame(notebook,width=500,height=333)
+# frame2.pack(fill='both',expand=1)
+#
+#
+# button = Button(frame,text="Hey I'm Guru Brother")
+# button.pack(fill='both')
+#
+# notebook.add(frame,text='Hey Man! click me')
+# notebook.pack(expand=1,fill='both')
+# notebook.add(frame2,text='hlo Man Brother to you')
+#
 
 
 
-notebook = tkinter.ttk.Notebook(window)
-
-frame = Frame(notebook,width=400,height=400)
-frame.pack(expand='True',fill='both')
-frame2 = Frame(notebook,width=500,height=333)
-frame2.pack(fill='both',expand=1)
+#---------------------------------------------------Treeview-------------------------------------------------------------
 
 
-button = Button(frame,text="Hey I'm Guru Brother")
-button.pack(fill='both')
+#
+# treevieew = ttk.Treeview(window,columns=["Name","Sirname","Rollno","Cool"])
+#
+# treevieew.column("#0",width=0,stretch='no')
+# treevieew.heading('Name',text="Name")
+#
+# treevieew.pack(side='left')
+#
+#
+# treevieew.insert('','end',iid=0,text='Parent',values=["Guru","Mahendrakar",20],)
+#
+# treevieew.insert('','end',iid=5,text='Cool',values=[1,2,3,4])
+# treevieew.insert('','end',iid=6,text='Cool',values=['Nitin',"Mahendrakar",37])
+#
+# treevieew.pack(padx=20)
+#
+# treevieew.move(5,0,1)
+# treevieew.move(6,0,0)
+# treevieew.config(height=50)
+#
 
-notebook.add(frame,text='Hey Man! click me')
-notebook.pack(expand=1,fill='both')
-notebook.add(frame2,text='hlo Man Brother to you')
+
+
+#----------------------------------------------------------Canvas----------------------------------------------
 
 
 
 if __name__ == '__main__':
     window.mainloop()
+
+
+
 

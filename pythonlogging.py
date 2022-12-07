@@ -29,4 +29,4 @@ formater = Formatter(format)
 file.setFormatter(formater)
 logging.addHandler(file)
 
-warning(" Hey i'm warning ")
+logging.warning(" Hey i'm warning ")
