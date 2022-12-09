@@ -2,6 +2,7 @@ from tkinter import ttk,Tk,Frame,Button,LabelFrame,filedialog
 import tkinter 
 from PIL import Image,ImageTk
 import os
+import playsound
 
 
 
@@ -29,7 +30,7 @@ pause_of_check = "On"
 
 
 window = Tk()
-window.geometry('480x390')
+window.geometry('740x550')
 window.iconbitmap(r"C:\Users\mahen\Downloads\musicincon.ico")
 window.iconname('Musicplayer')
 window.wm_title('Music_player')
@@ -40,8 +41,8 @@ image_frame = Frame(window,bg='black')
 image_frame.pack(side='top',anchor='nw',fill='both')
 
 
-image01 = Image.open(r"C:\Users\mahen\bitepy\OIP (1).jpeg")
-image01 = image01.resize((250,300))
+image01 = Image.open(r"C:\Users\mahen\bitepy\allfiles\maxresdefault (1).jpg")
+image01 = image01.resize((350,200))
 image01 = ImageTk.PhotoImage(image01)
 
 label_image = tkinter.Label(image_frame,
@@ -59,14 +60,23 @@ label_image = tkinter.Label(image_frame,
 label_image.pack(side= 'left',anchor='nw',fill='both')
 
 
+sc = tkinter.Scrollbar(image_frame,orient='vertical',activebackground='green')
 
 listboxx = tkinter.Listbox(image_frame,
                             highlightbackground='black',
                             highlightcolor='gray',
+                            width=30,
                             highlightthickness=3,
-                            height=19)
+                            height=19,
+                            bg='black',
+                            fg='white',
+                            font='myfont4.ttf 14 italic underline')
 
-listboxx.pack(side='top',anchor='nw',fill='x')
+listboxx.pack(side='left',anchor='nw')
+
+sc.config(command=listboxx.yview)
+listboxx.config(yscrollcommand=sc)
+sc.pack(side='left',fill='y')
 
 def folder_open():
     
@@ -95,43 +105,72 @@ menu_2.add_cascade(label='𝓢𝓮𝓽𝓽𝓲𝓷𝓰𝓼',menu=menu_)
 window.config(menu=menu_2)
 
 
+index = 0 
 os.chdir('allfiles')
 for music in os.listdir(os.getcwd()):
         if music.endswith('.mp3'):
-            listboxx.insert('end',)
+            listboxx.insert('end',str(index)+'.  ' + music)
+            index+=1
 
+index = 0 
 
-# pause__ = tkinter.StringVar()
-# pause__.set('sooo.png')
+for music in os.listdir(os.getcwd()):
+        if music.endswith('.mp3'):
+            listboxx.insert('end',str(index)+'.  ' + music)
+            index+=1
 
+index = 0 
+
+for music in os.listdir(os.getcwd()):
+        if music.endswith('.mp3'):
+            listboxx.insert('end',str(index)+'.  ' + music)
+            index+=1
 
 def pause_():
-    global button_pause
-    if pause_of_check!="On":
-        image03  = Image.open(r"OIP (2).jpeg")
-        image03 = image03.resize((40,40))
-        image03 = ImageTk.PhotoImage(image03)
+    global pause_of_check
+
+    if pause_of_check!='On':
+        button_pause.config(image=image02)
+        pause_of_check = 'On'
+        import audioplayer
+
         
-        button_pause.config(image=image03)
+        
+
 
     else:
+        import audioplayer
         button_pause.config(image=image03)
-    
+        pause_of_check = 'off'
+        import playsound
+
+        playsound.playsound(r"C:\Users\mahen\bitepy\allfiles\Ghani-Syaani.mp3")    
 frame2 = Frame(window,bg='black')
 frame2.pack(side='left')
 
-image02  = Image.open('sooo.png')
+#--- PAUSE PLAY
+
+image02  = Image.open(r"C:\Users\mahen\bitepy\allfiles\c054208e7a875849fb9849216103eb25-details.jpg")
 image02 = image02.resize((40,40))
 image02 = ImageTk.PhotoImage(image02)
 
-image03  = Image.open(r"OIP (2).jpeg")
+image03  = Image.open(r"C:\Users\mahen\bitepy\allfiles\OIP (6).jpeg")
 image03 = image03.resize((40,40))
 image03 = ImageTk.PhotoImage(image03)
 
 
 
+
+image04  = Image.open(r"C:\Users\mahen\bitepy\allfiles\pngtree-vector-back-icon-png-image_889628.jpg")
+image04 = image04.resize((40,40))
+image04 = ImageTk.PhotoImage(image04)
+
+image05  = Image.open(r"C:\Users\mahen\bitepy\allfiles\pngtree-next-icon-isolated-on-background-png-image_1793111.jpg")
+image05 = image05.resize((40,40))
+image05 = ImageTk.PhotoImage(image05)
+
 button_left = tkinter.Button(frame2,
-                            image=image02,
+                            image=image04,
                             bg='black',
                             cursor='hand2')
 button_left.pack(side='left',anchor='nw',padx=3)
@@ -145,7 +184,7 @@ button_pause = tkinter.Button(frame2,
 button_pause.pack(side='left',anchor='nw',padx=3)
 
 button_right = tkinter.Button(frame2,
-                            image=image02,
+                            image=image05,
                             bg='black',
                             cursor='hand2')
 

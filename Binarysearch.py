@@ -1,30 +1,33 @@
 import dataclasses
 import numpy
 import logging
+import time
 
 @dataclasses.dataclass
 class binary:
 
-    def One__(self,target_):
-        ii,jj = 0,0
+    def One__(self,list_,target_):
 
-        list_ = numpy.arange(0,263)
+        assert not target_>list_[-1],'YOur Target is very high brother'
 
-        if target_>len(list_):
-            assert False,'Data_ Does\' not matched '
+        x,y,z, = 0,len(list_),0
 
-        unx,llen,check =  0,len(list_)//2,0
+        while True:
+            z = (x+y)//2
 
-        while unx!=target_:
+            if target_==list_[z]:
+                return '__index__ is : {}'.format(z)
+            #target__ = 8
+            if target_<list_[z]:
+                x,y = 0,z-1
+                
             
-            if llen<=target_:
-                return llen,'right side-- check'
+            elif target_>list_[z]:
+                x,y = z+1,y
+            
+            if x==z:
+                return 'not found !'
 
-            else:
-                if llen>target_:
-                    return llen, 'r side-- check'
-        else:
-            return "Target_ Achieved_--"
-
+                        
 b = binary()
-print(b.One__(263))
+print(b.One__(list(range(8,55)),8))

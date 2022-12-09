@@ -2,7 +2,6 @@ import shutil
 import os
 print(os.getcwd())
 
-os.mkdir('allfiles')
 Codeing_files = [
 ]
 for files in os.listdir(os.getcwd()):
