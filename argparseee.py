@@ -9,3 +9,4 @@ x.add_argument('num3',help='this two numbers adding')
 xx = x.parse_args()
 
 print(int(xx.num1) + int(xx.num2) + int(xx.num3))
+afadfafafdadf
