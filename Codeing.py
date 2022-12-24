@@ -235,7 +235,7 @@
 # json.dumps  = dict to str
 # json.load(Recive in String)
 # json.dump(obj,file)(take only str) = take only string
-
+import os
 
 # pickle.loads  = binary to str
 # pickle.dumps = str to binary
@@ -1544,12 +1544,22 @@
 
 # if __name__ == '__main__':
 #     _you()
+#
+# class method:
+#     one_ = 8
+#
+#
+#     def _onee(self,a):
+#         print('_---_')
+#
+#
+# s  = method()
+#
+# s._onee('guru')+
+#
+# print(s._onee)
 
-import glob
-import shutil
-import os
-import re
 
-print(os.getcwd())
-for x in glob.glob('**.py'):
-    shutil.move(x,'S:/Code-r')
+a = zip([1,2,3,4],[5,6,7,8])
+
+print(list(zip(*a)))

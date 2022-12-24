@@ -25,9 +25,4 @@ import requests
 # not
 # xor 
 
-import webbrowser
-
-
-opening = webbrowser.Chrome('google').open('https://docs.python.org/3/library/threading.html#condition-objects')
-
 

@@ -1,15 +1,11 @@
 import tkinter.ttk
-from tkinter import *
-from PIL import *
-from PIL import Image,ImageTk
-from tkinter import filedialog,colorchooser
+from tkinter import filedialog,colorchooser,Tk
 
 # #---------------------------------------------------------Window Create-------------------------------------------------------------------------------
 window = Tk() #Creating window
 window.title("Practice")
 window.iconbitmap(r"C:\Users\mahen\Downloads\icons8-wi-fi-fair-48 (1).ico")
 
-window.geometry("400x400")
 
 
 # #------------------------------------------------------------Labels-------------------------------------------------------------------------------------------
@@ -536,7 +532,6 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 
 
 
-import tkcalendar
 #
 # a = StringVar()
 # def selected_date():
@@ -553,14 +548,14 @@ import tkcalendar
 #
 # #-------------------------------------------------------Data Entry ---------------------------------------------------
 
-def date_picker():
-    print("Your Date Is : {} ".format(calendar.get_date()))
-
-calendar = tkcalendar.DateEntry(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy',state='readonly' )
-calendar.pack(fill='both') # expand mat dena data entry me koi mat puch mujhe bhi malum nahi hai
-
-button = Button(window,text='Hy Bro',command=date_picker)
-button.pack()
+# def date_picker():
+#     print("Your Date Is : {} ".format(calendar.get_date()))
+#
+# calendar = tkcalendar.DateEntry(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy',state='readonly' )
+# calendar.pack(fill='both') # expand mat dena data entry me koi mat puch mujhe bhi malum nahi hai
+#
+# button = Button(window,text='Hy Bro',command=date_picker)
+# button.pack()
 
 
 #------------------------------------------------------fieldlog------------------------------------------------------------------
@@ -647,42 +642,45 @@ import os
 
 #----------------------------------------------------------Canvas----------------------------------------------
 
+#
+# note_ = ttk.Notebook(window)
+#
+# frame = Frame(window)
+#
+# text_ = Label(frame,text='gurumahendrakar')
+# text_.pack()
+#
+# note_.add(frame,text='frame-1')
+#
+#
+# frame = Frame(window)
+#
+# text_ = Label(frame,text='Hey I m frame-2')
+# text_.pack()
+#
+# note_.add(frame,text='fucker')
+#
+# note_.pack()
+# window.mainloop()
+# note_ = ttk.Notebook(window)
+#
+# frame = Frame(window)
+#
+# text_ = Label(frame,text='gurumahendrakar')
+# text_.pack()
+#
+# note_.add(frame,text='frame-1')
+#
+#
+# frame = Frame(window)
+#
+# text_ = Label(frame,text='Hey I m frame-2')
+# text_.pack()
+#
+# note_.add(frame,text='fucker')
+#
+# note_.pack()
 
-note_ = ttk.Notebook(window)
+import numpy as np 
 
-frame = Frame(window)
-
-text_ = Label(frame,text='gurumahendrakar')
-text_.pack()
-
-note_.add(frame,text='frame-1')
-
-
-frame = Frame(window)
-
-text_ = Label(frame,text='Hey I m frame-2')
-text_.pack()
-
-note_.add(frame,text='fucker')
-
-note_.pack()
-window.mainloop()
-note_ = ttk.Notebook(window)
-
-frame = Frame(window)
-
-text_ = Label(frame,text='gurumahendrakar')
-text_.pack()
-
-note_.add(frame,text='frame-1')
-
-
-frame = Frame(window)
-
-text_ = Label(frame,text='Hey I m frame-2')
-text_.pack()
-
-note_.add(frame,text='fucker')
-
-note_.pack()
-window.mainloop()
+a  = nu
