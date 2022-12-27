@@ -62,7 +62,10 @@ datetime2 = datetime.today() # Hume Current Time Batata Hai
 #
 
 #---------------------------------------------------------time----------------------------------------------------
+<<<<<<< HEAD
 
+=======
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 # time = time(hour=3 ,minute=44,second=22,microsecond=222)
 # print('minute :' ,time.minute)
 # print(time.max) # hour many hours seconds minutes in day  : 23:59:59.999999
@@ -83,7 +86,12 @@ datetime2 = datetime.today() # Hume Current Time Batata Hai
 # print(timedelta.min)
 # print(timedelta.days)
 # print(timedelta.seconds)
+<<<<<<< HEAD
 
+=======
+#
+#
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 # ---------------------------------------------------strftime-------------------------------------------------------------
 #

@@ -24,7 +24,11 @@ class typemethod:
     cls_intances = {}
 
     def __new__(self,class_name,inherited_classes,attributes):
+<<<<<<< HEAD
         return type(class_name,inherited_classes,attributes)
+=======
+        pass
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
     def __call__(cls,*args,**kwargs):
 

@@ -4,8 +4,13 @@ x = 0
 y = 1
 
 # 1st Logic : Pehle Maine small index dhonda (highervalue,smallvalue)
+<<<<<<< HEAD
 # 2nd Logic : smallvalue  ki 0 hone ke tak loop chalaya (smallvalue<highervalue value ko exhange karenge) bada nahi/
 # small_value aur higher value decrease karenge 
+=======
+# 2nd Logic : highervalue ki 0 hone ke tak loop chalaya (smallvalue<highervalue value ko exhange karenge) bada nahi/
+# highervalue_decrease karenge
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 
 
@@ -27,7 +32,10 @@ class Insertionsort:
         if x<=len(array)-1:
             if isinstance(self._indexfinder(array),tuple):
                 i,j= self._indexfinder(array)
+<<<<<<< HEAD
 
+=======
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
             else:
                 i = -1
 

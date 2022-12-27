@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import re 
 import requests
 
@@ -26,3 +27,13 @@ import requests
 # xor 
 
 
+=======
+# import re
+
+# string = "G#uru 7411891852 Mahendrakar"
+# compile = re.compile("[a-zA-z].+")
+# print(re.search(compile,string))
+
+# import os
+# file = os.open('texting.txt',os.O_RDWR)
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418

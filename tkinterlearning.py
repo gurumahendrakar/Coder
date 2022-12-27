@@ -1,11 +1,22 @@
 import tkinter.ttk
+<<<<<<< HEAD
 from tkinter import filedialog,colorchooser,Tk
+=======
+from tkinter import *
+from PIL import *
+from PIL import Image,ImageTk
+from tkinter import filedialog,colorchooser
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 # #---------------------------------------------------------Window Create-------------------------------------------------------------------------------
 window = Tk() #Creating window
 window.title("Practice")
 window.iconbitmap(r"C:\Users\mahen\Downloads\icons8-wi-fi-fair-48 (1).ico")
 
+<<<<<<< HEAD
+=======
+window.geometry("400x400")
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 
 # #------------------------------------------------------------Labels-------------------------------------------------------------------------------------------
@@ -532,6 +543,10 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 
 
 
+<<<<<<< HEAD
+=======
+import tkcalendar
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 #
 # a = StringVar()
 # def selected_date():
@@ -548,6 +563,7 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 #
 # #-------------------------------------------------------Data Entry ---------------------------------------------------
 
+<<<<<<< HEAD
 # def date_picker():
 #     print("Your Date Is : {} ".format(calendar.get_date()))
 #
@@ -556,6 +572,16 @@ from tkinter import ttk,Tk,colorchooser,Button,Label,Frame
 #
 # button = Button(window,text='Hy Bro',command=date_picker)
 # button.pack()
+=======
+def date_picker():
+    print("Your Date Is : {} ".format(calendar.get_date()))
+
+calendar = tkcalendar.DateEntry(window,selectmode='day',year=2022,month=12,day=23,cursor='hand2',date_pattern='dd/mm/yyyy',state='readonly' )
+calendar.pack(fill='both') # expand mat dena data entry me koi mat puch mujhe bhi malum nahi hai
+
+button = Button(window,text='Hy Bro',command=date_picker)
+button.pack()
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 
 #------------------------------------------------------fieldlog------------------------------------------------------------------
@@ -642,6 +668,7 @@ import os
 
 #----------------------------------------------------------Canvas----------------------------------------------
 
+<<<<<<< HEAD
 #
 # note_ = ttk.Notebook(window)
 #
@@ -686,4 +713,13 @@ import itertools
 
 for x in (itertools.chain([1,2,3,4])):
     print(x)
+=======
+
+
+if __name__ == '__main__':
+    window.mainloop()
+
+
+
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 

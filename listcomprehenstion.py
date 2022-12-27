@@ -34,6 +34,7 @@
 #
 # list_comprehenstion = [i for  i in range(8)]
 
+<<<<<<< HEAD
 
 # a = []
 
@@ -106,3 +107,5 @@ window.mainloop()
 
 
 
+=======
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418

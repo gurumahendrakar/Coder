@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import threading
 from threading import Thread,Event
 from queue import Queue
@@ -305,3 +306,14 @@ import datetime
 # thread1.start()
 # thread2.start()
 #
+=======
+from concurrent.futures import thread
+import threading
+import time
+
+import collections
+
+a = collections.Counter({1:2,3:4})
+
+print(a.items())
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418

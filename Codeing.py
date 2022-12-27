@@ -235,7 +235,11 @@
 # json.dumps  = dict to str
 # json.load(Recive in String)
 # json.dump(obj,file)(take only str) = take only string
+<<<<<<< HEAD
 import os
+=======
+
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 # pickle.loads  = binary to str
 # pickle.dumps = str to binary
@@ -1384,6 +1388,7 @@ import os
 #
 # print(enocodeing.decode(encoding='utf-8'))
 #
+<<<<<<< HEAD
 # #
 # butes = bytearray('Guruji»»»øø�ɷ',encoding='utf-16')
 # butes[0] = 6
@@ -1596,3 +1601,14 @@ import os
 # print(funcgenrator.__next__())
 
 impo
+=======
+#
+# butes = bytearray('Guruji',encoding='latin-1')
+# butes[0] = 65
+#
+# print(butes.decode('latin-1'))
+#
+
+
+
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418

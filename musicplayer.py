@@ -5,8 +5,12 @@ import os
 import playsound
 
 
+<<<<<<< HEAD
 songs_changer = ''
 songs_index = 0 
+=======
+
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 pause_of_check = "On"
 
 # 1	Button
@@ -31,7 +35,11 @@ pause_of_check = "On"
 
 
 window = Tk()
+<<<<<<< HEAD
 window.geometry('740x580')
+=======
+window.geometry('740x550')
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 window.iconbitmap(r"C:\Users\mahen\Downloads\musicincon.ico")
 window.iconname('Musicplayer')
 window.wm_title('Music_player')
@@ -46,6 +54,7 @@ image01 = Image.open(r"C:\Users\mahen\bitepy\allfiles\maxresdefault (1).jpg")
 image01 = image01.resize((350,200))
 image01 = ImageTk.PhotoImage(image01)
 
+<<<<<<< HEAD
 
 store_soundvalue = tkinter.IntVar()
 
@@ -76,6 +85,8 @@ scale = tkinter.Scale(image_frame,
 
 scale.pack(side='bottom',anchor='sw',fill='x')
 
+=======
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 label_image = tkinter.Label(image_frame,
                             image=image01,
                             highlightbackground='gray',
@@ -91,7 +102,10 @@ label_image = tkinter.Label(image_frame,
 label_image.pack(side= 'left',anchor='nw',fill='both')
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 sc = tkinter.Scrollbar(image_frame,orient='vertical',activebackground='green')
 
 listboxx = tkinter.Listbox(image_frame,
@@ -102,6 +116,7 @@ listboxx = tkinter.Listbox(image_frame,
                             height=19,
                             bg='black',
                             fg='white',
+<<<<<<< HEAD
                             font='myfont4.ttf 14 italic underline',
                             )
 
@@ -109,6 +124,12 @@ listboxx = tkinter.Listbox(image_frame,
 listboxx.pack(side='left',anchor='nw')
 
 
+=======
+                            font='myfont4.ttf 14 italic underline')
+
+listboxx.pack(side='left',anchor='nw')
+
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 sc.config(command=listboxx.yview)
 listboxx.config(yscrollcommand=sc)
 sc.pack(side='left',fill='y')
@@ -118,7 +139,10 @@ def folder_open():
     folder_musi = filedialog.askdirectory(initialdir='C:/Users')
     for music in os.listdir(folder_musi):
         if music.endswith('.mp3'):
+<<<<<<< HEAD
             songs.append(music)
+=======
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
             listboxx.insert('end',music)
 
     
@@ -148,6 +172,7 @@ for music in os.listdir(os.getcwd()):
             listboxx.insert('end',str(index)+'.  ' + music)
             index+=1
 
+<<<<<<< HEAD
 
 index = 0
 songs = [] 
@@ -184,6 +209,21 @@ def right_():
 
 
 
+=======
+index = 0 
+
+for music in os.listdir(os.getcwd()):
+        if music.endswith('.mp3'):
+            listboxx.insert('end',str(index)+'.  ' + music)
+            index+=1
+
+index = 0 
+
+for music in os.listdir(os.getcwd()):
+        if music.endswith('.mp3'):
+            listboxx.insert('end',str(index)+'.  ' + music)
+            index+=1
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 def pause_():
     global pause_of_check
@@ -191,6 +231,7 @@ def pause_():
     if pause_of_check!='On':
         button_pause.config(image=image02)
         pause_of_check = 'On'
+<<<<<<< HEAD
         mixer.music.unpause()
         
 
@@ -201,6 +242,23 @@ def pause_():
      
 frame2 = Frame(window,bg='black')
 frame2.pack(side='top',fill='x')
+=======
+        import audioplayer
+
+        
+        
+
+
+    else:
+        import audioplayer
+        button_pause.config(image=image03)
+        pause_of_check = 'off'
+        import playsound
+
+        playsound.playsound(r"C:\Users\mahen\bitepy\allfiles\Ghani-Syaani.mp3")    
+frame2 = Frame(window,bg='black')
+frame2.pack(side='left')
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 
 #--- PAUSE PLAY
 
@@ -226,9 +284,13 @@ image05 = ImageTk.PhotoImage(image05)
 button_left = tkinter.Button(frame2,
                             image=image04,
                             bg='black',
+<<<<<<< HEAD
                             cursor='hand2',
                             command=left_
                             )
+=======
+                            cursor='hand2')
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 button_left.pack(side='left',anchor='nw',padx=3)
 
 button_pause = tkinter.Button(frame2,
@@ -242,6 +304,7 @@ button_pause.pack(side='left',anchor='nw',padx=3)
 button_right = tkinter.Button(frame2,
                             image=image05,
                             bg='black',
+<<<<<<< HEAD
                             cursor='hand2',
                             command=right_)
 
@@ -258,4 +321,16 @@ mixer.music.play()
 if __name__ == '__main__':
     window.mainloop()
     
+=======
+                            cursor='hand2')
+
+
+button_right.pack(side='left',anchor='nw',padx=3)
+
+
+
+if __name__ == '__main__':
+    window.mainloop()
+    pass
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
    

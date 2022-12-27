@@ -59,4 +59,23 @@
 #     #pickle.load binary format se orginal format me lata hai
 #
 #
+<<<<<<< HEAD
 
+=======
+import pickle
+
+
+list = "Guru Mahendrakar"
+
+import os
+print('real',pickle.dumps('Guru Mahendrakar'))
+
+with open('texting.txt','wb') as f:
+    f.write(pickle.dumps("Guru Mahendrakar"))
+
+with open('texting.txt','rb') as rea:
+    print('yo',rea.read())
+    print(rea.tell())
+    rea.seek(0)
+    print(pickle.load(rea))
+>>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
