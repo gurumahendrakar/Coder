@@ -1559,7 +1559,40 @@ import os
 #
 # print(s._onee)
 
+#
+# import typing
+# class mygenrator:
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         return self.
+#
+# class method:
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self)-> str :
+#         a = ['Guru','Mahendrakar']
+#
+#         if a :
+#             return a[-1]
+#
+#
+#
+#
+# def funcGenrator()->typing.Generator:
+#
+#     print('__Genrator Entered__')
+#
+#     yield 'func yield'
+#     yield 'cool'
+#
+#
+# funcgenrator = funcGenrator()
+#
+# print(funcgenrator.__next__())
 
-a = zip([1,2,3,4],[5,6,7,8])
-
-print(list(zip(*a)))
+impo

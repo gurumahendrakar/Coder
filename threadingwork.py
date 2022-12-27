@@ -265,21 +265,43 @@ import datetime
 
 #------------------------------------------------Demon - Thread ----------------------------------------------------------
 
-def soO():
-    print(threading.currentThread())
-    def one_more():
-        print('one more -- thread')
-        for x in range(5):
-            print(x,end=' ')
+# def soO():
+#     print(threading.currentThread())
+#     def one_more():
+#         print('one more -- thread')
+#         for x in range(5):
+#             print(x,end=' ')
+#
+#     thread2_ = threading.Thread(target=one_more)
+#     thread2_.start()
+#     print('Thread Kill Or not : ',thread2_.daemon)
+#
+# print(threading.main_thread().is_alive())
+# thread_ = threading.Thread(target=soO)
+# thread_.start()
+#
+# thread_.join()
+# print('____Main Thread___')
 
-    thread2_ = threading.Thread(target=one_more)
-    thread2_.start()
-    print('Thread Kill Or not : ',thread2_.daemon)
-
-print(threading.main_thread().is_alive())
-thread_ = threading.Thread(target=soO)
-thread_.start()
-
-thread_.join()
-print('____Main Thread___')
-
+#
+# def fun():
+#     event.set()
+#     time.sleep(3)
+#     event.clear()
+#
+# def fun2():
+#     event.wait()
+#     while event.is_set():
+#         print('Is Green')
+#
+#     else:
+#         print(event.is_set())
+#
+#
+# event = Event()
+# thread1 = Thread(target=fun)
+# thread2 = Thread(target=fun2)
+#
+# thread1.start()
+# thread2.start()
+#

@@ -681,6 +681,9 @@ import os
 #
 # note_.pack()
 
-import numpy as np 
 
-a  = nu
+import itertools
+
+for x in (itertools.chain([1,2,3,4])):
+    print(x)
+

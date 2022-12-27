@@ -294,18 +294,24 @@
 #------------------------------------
 
 
-
-import collections
-
+#
+# import collections
+# from multipledispatch import dispatch
 #
 # class method:
 #     __slots__ =  ['one','two','three']
 #
-#
+#     @dispatch(int,int)
+#     def _one(self,a,b):
+#         return a+b
+#     @dispatch(str,int,int)
+#     def _one(self,a,b,c):
+#         return a+str(b)+str(c)
 #
 # a = method()
-# a.one = "Hey Buddy"
+# print(a._one(3,3))
+# print(a._one('Guru',3,2))
 #
-# print(a.one)
-
+#
+#
 

@@ -1,4 +1,5 @@
 import  contextlib
+import io
 
 
 class __call:
@@ -6,9 +7,9 @@ class __call:
     def __call__(self,*args):
         print(*args)
 
-class contextlib2(__call):
+class contextlib2():
     def __init__(self,function):
-        self.open = open('texting.txt','r')
+        self.open = open(function,'r')
 
     def __enter__(self):
         print("Textwrapper_io object Was Created You Can (Write & Read)")
@@ -19,12 +20,12 @@ class contextlib2(__call):
               " Error Message :{}\n"
               " traceback (file Object) : {}".format(exc_type,exc_value,traceback))
 
-        if exc_type==type(FileNotFoundError()):
-            return True
+        if exc_type== type(io.UnsupportedOperation()):
+            class readableChoice(Exception):
+                def __init__(self,messege):
+                    pass
 
-        elif exc_type==type(EOFError):
-            return True #-> Error Nahi Dega return True likhna Compulsary nahi to koi effect nahi padega
-                                    # Error Dega
+            raise readableChoice('ye reading object hai isme aap write nahi kar sakte')
 
 # @contextlib2
 # def wrappingcontextlib2():
@@ -32,7 +33,7 @@ class contextlib2(__call):
 #
 #
 #
-with contextlib2('Hey Bro ! Whats\' Doing Brother') as file:
+with contextlib2('texting.txt') as file:
     file.write('Hey I am Guru')
 #
 #
