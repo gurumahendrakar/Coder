@@ -235,11 +235,7 @@
 # json.dumps  = dict to str
 # json.load(Recive in String)
 # json.dump(obj,file)(take only str) = take only string
-<<<<<<< HEAD
-import os
-=======
-
->>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
+import itertools
 
 # pickle.loads  = binary to str
 # pickle.dumps = str to binary
@@ -1387,8 +1383,7 @@ import os
 # enocodeing = bytes(s,encoding = 'utf-8')
 #
 # print(enocodeing.decode(encoding='utf-8'))
-#
-<<<<<<< HEAD
+
 # #
 # butes = bytearray('Guruji»»»øø�ɷ',encoding='utf-16')
 # butes[0] = 6
@@ -1600,15 +1595,98 @@ import os
 #
 # print(funcgenrator.__next__())
 
-impo
-=======
 #
-# butes = bytearray('Guruji',encoding='latin-1')
+#
+# for x in a:
+#     print(xx(x))
+# else:
+#     print('Data Was clear',list(a))
+#
+# butes = bytearray('Guruji%%%%',encoding='latin-1')
 # butes[0] = 65
 #
 # print(butes.decode('latin-1'))
 #
 
+# a = itertools.chain(['Guurmau',1,2,3,4,5])
+# b = itertools.groupby('aaabbbcccddcc')
+# for x,y in b:
+#     print(x, list(y))
+
+# import builtins
+# a = (x for x in range(3))
+# print(2 in a)
+#
+# x = 8
+#
+# class method:
+#     def __init__(self):
+#         self.name = [self.tool]
+#
+#     def tool(self,name):
+#         return name.upper()
+#
+#
+#
+#
+# a = method()
+
+# def tool():
+#     for x in range(1):
+#         print(a.name[x]('Guru'))
+#
+# tool()
+
+class method:
+
+    def __init__(self,*args):
+        self.args = args
+
+    def __str__(self):
+        return '{}'.format(list(self.args))
+
+    def _SoBeautiful(self):
+        print('Hey Man !!')
+
+    def uou(self):
+        print('How Many Likes In the Cool!!')
+
+o = method(1,2,3,4,5)
+
+# print(method.__dict__['uou'](1))
+
+#
+# def tool():
+#     print('HOw Many Likes !! ')
+#
+# a  = tool
+# a.name = 'Guru'
+# a.name= 'Guru Mahendrakar'
+#
+# print(a.name)
+
+#
+# class method:
+#     pass
+#
+#
+# class method2(method):
+#
+#     def __init__(self):
+#         self.name = "Guru"
+#
+#
+# a = method()
+# print('guruji')
+# print(method2.__bases__)
 
 
->>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
+def tyo():
+    yield 'Guru'
+
+def tyo2():
+    yield  'Mahendrakar'
+
+
+print(id([1,2,3,4,5]))
+print(id([1,2,3,4,5,6,2222]))

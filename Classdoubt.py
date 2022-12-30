@@ -57,6 +57,9 @@
     #     print(" Object __dict__ KEY Was Added Succusfully")
 
 
+    # class ke items ko fetch kar sakte ho....
+    # def __class_getitem__(cls, item):
+    #     return method.__dict__.get(item)
 
     # def __str__(self):
     #     # __str __ aur __repr __ dono Hai to __repr__ First Call Hoga
@@ -91,6 +94,7 @@
 #     def __del__(self):
 #         print("Garbage Collecter Is Executed")
 		  # Ye Automaticlly __call__ hota hai jab program pura khatam hojata hai
+
 
 # class_helps = class_help()
 # class_helps.Guru = "Mahendrakar"
@@ -298,16 +302,15 @@
 #
 # import collections
 # from multipledispatch import dispatch
-=======
+
 
 import collections
 
->>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
 #
 # class method:
 #     __slots__ =  ['one','two','three']
 #
-<<<<<<< HEAD
+
 #     @dispatch(int,int)
 #     def _one(self,a,b):
 #         return a+b
@@ -329,5 +332,18 @@ import collections
 #
 # print(a.one)
 
->>>>>>> a61a249b50f3ad60a15e2e96bd630d1606ad1418
+
+class method:
+    pass
+
+
+class method2(method):
+
+    def __init__(self):
+        self.name = "Guru"
+
+
+a = method()
+print('guruji')
+print(method2.__mro__)
 
